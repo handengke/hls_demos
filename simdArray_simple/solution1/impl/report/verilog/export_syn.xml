@@ -1,0 +1,159 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2021.1</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>3.000</TargetClockPeriod>
+    <AchievedClockPeriod>1.941</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>1.941</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>1.941</CP_SYNTH>
+    <CP_TARGET>3.000</CP_TARGET>
+    <SLACK_FINAL>1.059</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>1.059</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>1.059</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>1.059</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>3</BRAM>
+      <CLB>0</CLB>
+      <DSP>5</DSP>
+      <FF>5981</FF>
+      <LATCH>0</LATCH>
+      <LUT>3620</LUT>
+      <SRL>548</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>2688</BRAM>
+      <CLB>0</CLB>
+      <DSP>5952</DSP>
+      <FF>1743360</FF>
+      <LUT>871680</LUT>
+      <URAM>640</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="simd_array" DISPNAME="inst" RTLNAME="simd_array">
+      <SubModules count="6">control_s_axi_U fadd_32ns_32ns_32_10_full_dsp_1_U1 fdiv_32ns_32ns_32_16_no_dsp_1_U3 fmul_32ns_32ns_32_5_max_dsp_1_U2 gmem0_m_axi_U gmem1_m_axi_U</SubModules>
+      <Resources BRAM="3" DSP="5" FF="5981" LUT="3620"/>
+      <LocalResources FF="2003" LUT="445"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="simd_array_control_s_axi" DEPTH="1" TYPE="rtl" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="simd_array_control_s_axi">
+      <Resources FF="311" LUT="328"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fadd_32ns_32ns_32_10_full_dsp_1_U1" BINDMODULE="simd_array_fadd_32ns_32ns_32_10_full_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fadd_32ns_32ns_32_10_full_dsp_1" DISPNAME="fadd_32ns_32ns_32_10_full_dsp_1_U1" RTLNAME="simd_array_fadd_32ns_32ns_32_10_full_dsp_1">
+      <Resources DSP="2" FF="361" LUT="245"/>
+      <LocalResources FF="96" LUT="50"/>
+      <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="9" LOOP="loop1_loop2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_10_full_dsp_1_U1" SOURCE="simdArray_simple/simdArray.cpp:28" URAM="0" VARIABLE="add9"/>
+      <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="9" LOOP="loop1_loop2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_10_full_dsp_1_U1" SOURCE="simdArray_simple/simdArray.cpp:31" URAM="0" VARIABLE="add"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fdiv_32ns_32ns_32_16_no_dsp_1_U3" BINDMODULE="simd_array_fdiv_32ns_32ns_32_16_no_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fdiv_32ns_32ns_32_16_no_dsp_1" DISPNAME="fdiv_32ns_32ns_32_16_no_dsp_1_U3" RTLNAME="simd_array_fdiv_32ns_32ns_32_16_no_dsp_1">
+      <Resources FF="795" LUT="804"/>
+      <LocalResources FF="97" LUT="17"/>
+      <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fdiv" DSP="0" ID="" IMPL="fabric" LATENCY="15" LOOP="loop1_loop2" OPTYPE="fdiv" PRAGMA="" RTLNAME="fdiv_32ns_32ns_32_16_no_dsp_1_U3" SOURCE="simdArray_simple/simdArray.cpp:30" URAM="0" VARIABLE="div"/>
+    </RtlModule>
+    <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U2" BINDMODULE="simd_array_fmul_32ns_32ns_32_5_max_dsp_1" DEPTH="1" TYPE="resource" MODULENAME="fmul_32ns_32ns_32_5_max_dsp_1" DISPNAME="fmul_32ns_32ns_32_5_max_dsp_1_U2" RTLNAME="simd_array_fmul_32ns_32ns_32_5_max_dsp_1">
+      <Resources DSP="3" FF="153" LUT="103"/>
+      <LocalResources FF="96" LUT="16"/>
+      <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="4" LOOP="loop1_loop2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_5_max_dsp_1_U2" SOURCE="simdArray_simple/simdArray.cpp:29" URAM="0" VARIABLE="mul"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="simd_array_gmem0_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem0_m_axi" DISPNAME="gmem0_m_axi_U" RTLNAME="simd_array_gmem0_m_axi">
+      <Resources BRAM="2" FF="1564" LUT="1170"/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="simd_array_gmem1_m_axi" DEPTH="1" TYPE="rtl" MODULENAME="gmem1_m_axi" DISPNAME="gmem1_m_axi_U" RTLNAME="simd_array_gmem1_m_axi">
+      <Resources BRAM="1" FF="794" LUT="525"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="1.627" DATAPATH_LOGIC_DELAY="0.412" DATAPATH_NET_DELAY="1.215" ENDPOINT_PIN="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[11]" LOGIC_LEVELS="5" MAX_FANOUT="9" SLACK="1.059" STARTPOINT_PIN="gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]/C">
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="774"/>
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/m_axi_gmem0_WVALID_INST_0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/bus_equal_gen.WLAST_Dummy_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_43" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_42" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.544" DATAPATH_LOGIC_DELAY="0.380" DATAPATH_NET_DELAY="1.164" ENDPOINT_PIN="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[12]" LOGIC_LEVELS="5" MAX_FANOUT="9" SLACK="1.147" STARTPOINT_PIN="gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]/C">
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="774"/>
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/m_axi_gmem0_WVALID_INST_0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/bus_equal_gen.WLAST_Dummy_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_43" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_42" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.504" DATAPATH_LOGIC_DELAY="0.329" DATAPATH_NET_DELAY="1.175" ENDPOINT_PIN="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/DINADIN[0]" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="1.154" STARTPOINT_PIN="opcode_read_reg_920_reg[12]/C">
+      <CELL NAME="opcode_read_reg_920_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1388"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/fifo_resp_to_user/mem_reg_i_79" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_44" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_24" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.502" DATAPATH_LOGIC_DELAY="0.380" DATAPATH_NET_DELAY="1.122" ENDPOINT_PIN="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[10]" LOGIC_LEVELS="5" MAX_FANOUT="9" SLACK="1.169" STARTPOINT_PIN="gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]/C">
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="774"/>
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/m_axi_gmem0_WVALID_INST_0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/wreq_throttle/bus_equal_gen.WLAST_Dummy_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_43" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_42" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="350"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="1.501" DATAPATH_LOGIC_DELAY="0.329" DATAPATH_NET_DELAY="1.172" ENDPOINT_PIN="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/DINADIN[7]" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="1.194" STARTPOINT_PIN="opcode_read_reg_920_reg[12]/C">
+      <CELL NAME="opcode_read_reg_920_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1388"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/fifo_resp_to_user/mem_reg_i_79" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_44" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_17" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1014"/>
+      <CELL NAME="gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/simd_array_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/simd_array_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/simd_array_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/simd_array_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/simd_array_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/simd_array_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Tue Sep 27 14:10:48 CST 2022"/>
+    <item NAME="Version" VALUE="2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)"/>
+    <item NAME="Project" VALUE="simdArray_simple"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="virtexuplusHBM"/>
+    <item NAME="Target device" VALUE="xcu50-fsvh2104-2-e"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="3 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="3 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

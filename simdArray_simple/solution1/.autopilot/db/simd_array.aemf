@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1664245754895">
+  <ports id="1" name="gmem0" type="PortType" coreId="183" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="gmem1" type="PortType" coreId="114" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="din_a" type="PortType" originalName="din_a" coreId="119" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="din_b" type="PortType" originalName="din_b" coreId="3711799248" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="out_r" type="PortType" originalName="out" coreId="1330007625" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="size" type="PortType" originalName="size" coreId="3711728464" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="opcode" type="PortType" originalName="opcode" coreId="3711352736" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="193" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="195" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="198" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="200" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="202" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="203" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="208" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="213" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="214" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="219" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="227" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="230" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="231" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="232" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="234" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="235" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="238" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="239" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="240" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.4/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.4/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.2"/>
+  <edges id="248" source_obj="//@regions.0/@basic_blocks.4/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.3"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.3"/>
+  <edges id="252" source_obj="//@regions.0/@basic_blocks.4/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.4"/>
+  <edges id="257" source_obj="//@regions.0/@basic_blocks.4/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.5"/>
+  <edges id="258" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.6"/>
+  <edges id="259" source_obj="//@regions.0/@basic_blocks.4/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.6"/>
+  <edges id="262" source_obj="//@regions.0/@basic_blocks.4/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.7"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.4/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.8"/>
+  <edges id="267" source_obj="//@regions.0/@basic_blocks.4/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.9"/>
+  <edges id="268" source_obj="//@regions.0/@basic_blocks.4/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.10"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.10"/>
+  <edges id="271" source_obj="//@regions.0/@basic_blocks.4/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.11"/>
+  <edges id="274" source_obj="//@regions.0/@basic_blocks.4/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.12"/>
+  <edges id="275" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.13"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.4/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.13"/>
+  <edges id="278" source_obj="//@regions.0/@basic_blocks.4/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.14"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.4/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.15"/>
+  <edges id="282" source_obj="//@regions.0/@basic_blocks.4/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.16"/>
+  <edges id="283" source_obj="//@regions.0/@basic_blocks.4/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.17"/>
+  <edges id="284" source_obj="//@regions.0/@basic_blocks.4/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.17"/>
+  <edges id="285" source_obj="//@regions.0/@basic_blocks.4/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.18"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.18"/>
+  <edges id="287" source_obj="//@regions.0/@basic_blocks.4/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.19"/>
+  <edges id="289" source_obj="//@regions.0/@basic_blocks.4/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.20"/>
+  <edges id="292" source_obj="//@regions.0/@basic_blocks.4/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.21"/>
+  <edges id="293" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.22"/>
+  <edges id="294" source_obj="//@regions.0/@basic_blocks.4/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.22"/>
+  <edges id="297" source_obj="//@regions.0/@basic_blocks.4/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.23"/>
+  <edges id="301" source_obj="//@regions.0/@basic_blocks.4/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.24"/>
+  <edges id="302" source_obj="//@regions.0/@basic_blocks.4/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.24"/>
+  <edges id="307" source_obj="//@regions.0/@basic_blocks.4/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.25"/>
+  <edges id="308" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.26"/>
+  <edges id="309" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="311" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="313" source_obj="//@regions.0/@basic_blocks.3/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="314" source_obj="//@regions.0/@basic_blocks.3/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="315" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="317" source_obj="//@regions.0/@basic_blocks.3/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="320" source_obj="//@regions.0/@basic_blocks.3/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.5"/>
+  <edges id="321" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.6"/>
+  <edges id="322" source_obj="//@regions.0/@basic_blocks.3/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.6"/>
+  <edges id="324" source_obj="//@regions.0/@basic_blocks.3/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.7"/>
+  <edges id="327" source_obj="//@regions.0/@basic_blocks.3/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.8"/>
+  <edges id="328" source_obj="//@regions.0/@basic_blocks.3/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.9"/>
+  <edges id="329" source_obj="//@regions.0/@basic_blocks.3/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.10"/>
+  <edges id="330" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.10"/>
+  <edges id="332" source_obj="//@regions.0/@basic_blocks.3/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.11"/>
+  <edges id="335" source_obj="//@regions.0/@basic_blocks.3/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.12"/>
+  <edges id="336" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.13"/>
+  <edges id="337" source_obj="//@regions.0/@basic_blocks.3/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.13"/>
+  <edges id="339" source_obj="//@regions.0/@basic_blocks.3/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.14"/>
+  <edges id="342" source_obj="//@regions.0/@basic_blocks.3/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.15"/>
+  <edges id="343" source_obj="//@regions.0/@basic_blocks.3/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.16"/>
+  <edges id="344" source_obj="//@regions.0/@basic_blocks.3/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.17"/>
+  <edges id="345" source_obj="//@regions.0/@basic_blocks.3/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.17"/>
+  <edges id="346" source_obj="//@regions.0/@basic_blocks.3/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.18"/>
+  <edges id="347" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.18"/>
+  <edges id="348" source_obj="//@regions.0/@basic_blocks.3/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.19"/>
+  <edges id="350" source_obj="//@regions.0/@basic_blocks.3/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.20"/>
+  <edges id="353" source_obj="//@regions.0/@basic_blocks.3/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.21"/>
+  <edges id="354" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.22"/>
+  <edges id="355" source_obj="//@regions.0/@basic_blocks.3/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.22"/>
+  <edges id="357" source_obj="//@regions.0/@basic_blocks.3/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.23"/>
+  <edges id="360" source_obj="//@regions.0/@basic_blocks.3/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.24"/>
+  <edges id="361" source_obj="//@regions.0/@basic_blocks.3/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.24"/>
+  <edges id="364" source_obj="//@regions.0/@basic_blocks.3/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.25"/>
+  <edges id="365" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.26"/>
+  <edges id="366" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="368" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="370" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="371" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="372" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="374" source_obj="//@regions.0/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="377" source_obj="//@regions.0/@basic_blocks.2/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="378" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="379" source_obj="//@regions.0/@basic_blocks.2/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="381" source_obj="//@regions.0/@basic_blocks.2/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.7"/>
+  <edges id="384" source_obj="//@regions.0/@basic_blocks.2/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.8"/>
+  <edges id="385" source_obj="//@regions.0/@basic_blocks.2/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.9"/>
+  <edges id="386" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.10"/>
+  <edges id="387" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.10"/>
+  <edges id="389" source_obj="//@regions.0/@basic_blocks.2/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.11"/>
+  <edges id="392" source_obj="//@regions.0/@basic_blocks.2/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.12"/>
+  <edges id="393" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.13"/>
+  <edges id="394" source_obj="//@regions.0/@basic_blocks.2/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.13"/>
+  <edges id="396" source_obj="//@regions.0/@basic_blocks.2/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.14"/>
+  <edges id="399" source_obj="//@regions.0/@basic_blocks.2/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.15"/>
+  <edges id="400" source_obj="//@regions.0/@basic_blocks.2/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.16"/>
+  <edges id="401" source_obj="//@regions.0/@basic_blocks.2/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.17"/>
+  <edges id="402" source_obj="//@regions.0/@basic_blocks.2/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.17"/>
+  <edges id="403" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.18"/>
+  <edges id="404" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.18"/>
+  <edges id="405" source_obj="//@regions.0/@basic_blocks.2/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.19"/>
+  <edges id="407" source_obj="//@regions.0/@basic_blocks.2/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.20"/>
+  <edges id="410" source_obj="//@regions.0/@basic_blocks.2/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.21"/>
+  <edges id="411" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.22"/>
+  <edges id="412" source_obj="//@regions.0/@basic_blocks.2/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.22"/>
+  <edges id="414" source_obj="//@regions.0/@basic_blocks.2/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.23"/>
+  <edges id="417" source_obj="//@regions.0/@basic_blocks.2/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.24"/>
+  <edges id="418" source_obj="//@regions.0/@basic_blocks.2/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.24"/>
+  <edges id="421" source_obj="//@regions.0/@basic_blocks.2/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.25"/>
+  <edges id="422" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.26"/>
+  <edges id="423" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="425" source_obj="//@regions.0/@basic_blocks.5/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="427" source_obj="//@regions.0/@basic_blocks.5/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.2"/>
+  <edges id="428" source_obj="//@regions.0/@basic_blocks.5/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.3"/>
+  <edges id="429" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.3"/>
+  <edges id="431" source_obj="//@regions.0/@basic_blocks.5/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.4"/>
+  <edges id="434" source_obj="//@regions.0/@basic_blocks.5/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.5"/>
+  <edges id="435" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.6"/>
+  <edges id="436" source_obj="//@regions.0/@basic_blocks.5/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.6"/>
+  <edges id="438" source_obj="//@regions.0/@basic_blocks.5/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.7"/>
+  <edges id="441" source_obj="//@regions.0/@basic_blocks.5/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.8"/>
+  <edges id="442" source_obj="//@regions.0/@basic_blocks.5/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.9"/>
+  <edges id="443" source_obj="//@regions.0/@basic_blocks.5/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.10"/>
+  <edges id="444" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.10"/>
+  <edges id="446" source_obj="//@regions.0/@basic_blocks.5/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.11"/>
+  <edges id="449" source_obj="//@regions.0/@basic_blocks.5/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.12"/>
+  <edges id="450" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.13"/>
+  <edges id="451" source_obj="//@regions.0/@basic_blocks.5/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.13"/>
+  <edges id="453" source_obj="//@regions.0/@basic_blocks.5/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.14"/>
+  <edges id="456" source_obj="//@regions.0/@basic_blocks.5/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.15"/>
+  <edges id="457" source_obj="//@regions.0/@basic_blocks.5/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.16"/>
+  <edges id="458" source_obj="//@regions.0/@basic_blocks.5/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.17"/>
+  <edges id="459" source_obj="//@regions.0/@basic_blocks.5/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.17"/>
+  <edges id="460" source_obj="//@regions.0/@basic_blocks.5/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.18"/>
+  <edges id="461" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.18"/>
+  <edges id="462" source_obj="//@regions.0/@basic_blocks.5/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.19"/>
+  <edges id="464" source_obj="//@regions.0/@basic_blocks.5/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.20"/>
+  <edges id="467" source_obj="//@regions.0/@basic_blocks.5/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.21"/>
+  <edges id="468" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.22"/>
+  <edges id="469" source_obj="//@regions.0/@basic_blocks.5/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.22"/>
+  <edges id="471" source_obj="//@regions.0/@basic_blocks.5/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.23"/>
+  <edges id="474" source_obj="//@regions.0/@basic_blocks.5/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.24"/>
+  <edges id="475" source_obj="//@regions.0/@basic_blocks.5/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.24"/>
+  <edges id="478" source_obj="//@regions.0/@basic_blocks.5/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.25"/>
+  <edges id="479" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.26"/>
+  <edges id="480" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="483" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="484" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="485" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.2"/>
+  <edges id="486" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.2"/>
+  <edges id="487" source_obj="//@regions.0/@basic_blocks.6/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.3"/>
+  <edges id="488" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.3"/>
+  <edges id="489" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.4"/>
+  <edges id="490" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="491" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="492" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="495" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="497" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="498" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="500" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="501" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="502" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="503" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="506" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="509" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="510" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="511" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="512" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="513" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="514" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="515" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="516" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="517" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="520" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="522" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="524" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="527" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="799" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="800" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="801" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="802" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="803" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="804" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="805" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="806" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="807" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="808" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="809" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="810" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="811" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="812" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.25"/>
+  <edges id="813" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.24"/>
+  <edges id="814" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.15"/>
+  <edges id="815" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.8"/>
+  <edges id="816" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.24"/>
+  <edges id="817" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.25"/>
+  <edges id="818" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.24"/>
+  <edges id="819" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.15"/>
+  <edges id="820" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.8"/>
+  <edges id="821" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.24"/>
+  <edges id="822" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.25"/>
+  <edges id="823" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.24"/>
+  <edges id="824" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.15"/>
+  <edges id="825" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.8"/>
+  <edges id="826" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.4/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.24"/>
+  <edges id="827" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.25"/>
+  <edges id="828" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.24"/>
+  <edges id="829" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.15"/>
+  <edges id="830" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.8"/>
+  <edges id="831" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.5/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.24"/>
+  <edges id="832" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="833" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="834" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="835" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="836" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.2"/>
+  <edges id="837" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.3"/>
+  <edges id="838" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="839" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.3"/>
+  <edges id="840" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.2"/>
+  <edges id="-258" source_obj="//@regions.0/@basic_blocks.4/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="-293" source_obj="//@regions.0/@basic_blocks.4/@node_objs.22" sink_obj="//@ports.0"/>
+  <edges id="-321" source_obj="//@regions.0/@basic_blocks.3/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="-354" source_obj="//@regions.0/@basic_blocks.3/@node_objs.22" sink_obj="//@ports.0"/>
+  <edges id="-378" source_obj="//@regions.0/@basic_blocks.2/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="-411" source_obj="//@regions.0/@basic_blocks.2/@node_objs.22" sink_obj="//@ports.0"/>
+  <edges id="-435" source_obj="//@regions.0/@basic_blocks.5/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="-468" source_obj="//@regions.0/@basic_blocks.5/@node_objs.22" sink_obj="//@ports.0"/>
+  <blocks id="43" name="block_43" type="BlockType">
+    <controlOutputObjs>block_49</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="k" originalName="k" coreId="0" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i" originalName="i" coreId="0" bitwidth="28" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="indvar_flatten" coreId="0" bitwidth="33" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="opcode_read" lineNumber="7" originalName="opcode" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" contextFuncName="simd_array" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="7" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>opcode</dataInputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="size_read" lineNumber="7" originalName="size" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" contextFuncName="simd_array" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="7" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>size</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="out_read" lineNumber="7" originalName="out" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" contextFuncName="simd_array" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="7" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>out_r</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="din_b_read" lineNumber="7" originalName="din_b" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" contextFuncName="simd_array" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="7" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>din_b</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="din_a_read" lineNumber="7" originalName="din_a" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" contextFuncName="simd_array" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="7" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>din_a</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="add_ln20" lineNumber="20" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln20_fu_342_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="32" opcode="add" m_display="0" m_delay="0.88" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="20" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="trunc_ln" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln_reg_939" coreId="3711582608" contextFuncName="simd_array" bitwidth="27" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="zext_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="zext_ln23_fu_373_p1" coreId="2432" contextFuncName="simd_array" bitwidth="28" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="add_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln23_fu_376_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="28" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="tmp_fu_382_p3" coreId="3711549448" contextFuncName="simd_array" bitwidth="33" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="indvar_flatten_write_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711549136" contextFuncName="simd_array" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="i_write_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711706672" contextFuncName="simd_array" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="k_write_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711549136" contextFuncName="simd_array" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711549136" contextFuncName="simd_array" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+      <controlInputObjs>block_49</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="186" name="block_186" type="BlockType">
+    <controlInputObjs>block_49</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="185" name="_ln36" lineNumber="36" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711536448" contextFuncName="simd_array" opcode="ret" nodeLabel="35.0" m_display="0" m_topoIndex="148" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="36" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+      <validLinenumbers>36</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="833" pipe_depth="33" RegionName="loop1_loop2">
+    <basic_blocks id="49" name="block_49" type="BlockType">
+      <controlInputObjs>block_43</controlInputObjs>
+      <controlInputObjs>.split._crit_edge</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_186</controlOutputObjs>
+      <controlOutputObjs>.split2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="indvar_flatten_load" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711746672" contextFuncName="simd_array" bitwidth="33" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="icmp_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="icmp_ln23_fu_393_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="simd_array" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.88" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="add_ln23_1" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln23_1_fu_398_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="33" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.89" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711744912" contextFuncName="simd_array" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split2</controlInputObjs>
+        <controlInputObjs>block_186</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>23</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="66" name=".split2" type="BlockType">
+      <controlInputObjs>block_49</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_178</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <controlOutputObjs>block_150</controlOutputObjs>
+      <controlOutputObjs>block_122</controlOutputObjs>
+      <controlOutputObjs>block_94</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="k_load" lineNumber="25" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3699751504" contextFuncName="simd_array" bitwidth="6" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="25" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="i_load" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711854448" contextFuncName="simd_array" bitwidth="28" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="icmp_ln25" lineNumber="25" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="icmp_ln25_fu_410_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="simd_array" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.61" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="25" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="select_ln23_fu_416_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="simd_array" bitwidth="6" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.29" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="add_ln23_5" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln23_5_fu_424_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="28" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.85" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="select_ln23_1" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="select_ln23_1_fu_430_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="simd_array" bitwidth="28" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.32" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="trunc_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln23_fu_438_p1" coreId="3712120176" contextFuncName="simd_array" bitwidth="27" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="add_ln31_mid2_v_v" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln31_mid2_v_v_fu_463_p3" coreId="3711650144" contextFuncName="simd_array" bitwidth="34" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="zext_ln23_1" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="zext_ln23_1_fu_470_p1" coreId="257" contextFuncName="simd_array" bitwidth="64" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln23_2" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln23_2_fu_474_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.14" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="add_ln23_3" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln23_3_fu_479_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.14" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="add_ln23_4" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln23_4_fu_484_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.14" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln26" lineNumber="26" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3712282368" contextFuncName="simd_array" opcode="switch" nodeLabel="2.0" m_display="0" m_delay="0.65" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="26" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <controlInputObjs>block_178</controlInputObjs>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+        <controlInputObjs>block_150</controlInputObjs>
+        <controlInputObjs>block_122</controlInputObjs>
+        <controlInputObjs>block_94</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>25</validLinenumbers>
+        <validLinenumbers>23</validLinenumbers>
+        <validLinenumbers>26</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="94" name="block_94" type="BlockType">
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="trunc_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln30_fu_489_p1" coreId="808591443" contextFuncName="simd_array" bitwidth="5" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="shl_ln2" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="shl_ln2_fu_492_p3" coreId="3711800496" contextFuncName="simd_array" bitwidth="7" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="zext_ln30_fu_500_p1" coreId="3711700504" contextFuncName="simd_array" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="add_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln30_fu_504_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="trunc_ln4" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln4_fu_509_p4" coreId="224" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="sext_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln30_fu_519_p1" coreId="3712247384" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="gmem0_addr_6" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3712246512" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="gmem0_load_3_req" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="gmem0_addr_6_read" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="108" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="bitcast_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="grp_fu_334_p0" coreId="3712246160" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fdiv</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln30_1" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln30_1_fu_529_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="trunc_ln30_1" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln30_1_fu_534_p4" coreId="3712277944" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="sext_ln30_1" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln30_1_fu_544_p1" coreId="3712279008" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="gmem1_addr_3" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3711699112" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="gmem1_load_3_req" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="101" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="gmem1_addr_3_read" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="109" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="bitcast_ln30_1" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="grp_fu_334_p1" coreId="3711798848" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fdiv</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="div" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="fdiv_32ns_32ns_32_16_no_dsp_1_U3" coreName="FDiv" implIndex="fabric" control="no" opType="fdiv" coreId="20" contextFuncName="simd_array" bitwidth="32" opcode="fdiv" nodeLabel="13.0" nodeLatency="15" m_display="0" m_delay="1.81" m_topoIndex="118" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="add_ln30_2" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln30_2_fu_554_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="bitcast_ln30_2" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln30_2_fu_881_p1" coreId="1852795252" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="29.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>fdiv</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="trunc_ln30_2" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln30_2_fu_559_p4" coreId="574453865" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="sext_ln30_2" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln30_2_fu_569_p1" coreId="540697965" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="gmem0_addr_7" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="1819307369" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>writereq</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>writeresp</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="gmem0_addr_7_req" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writereq" nodeLabel="28.0" m_display="0" m_delay="2.19" m_topoIndex="128" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="gmem0_addr_7_write_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" opcode="write" nodeLabel="29.0" m_display="0" m_delay="2.19" m_topoIndex="133" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="gmem0_addr_7_resp" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writeresp" nodeLabel="30.0" nodeLatency="4" m_display="0" m_delay="2.19" m_topoIndex="140" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="br_ln30" lineNumber="30" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="1752461088" contextFuncName="simd_array" opcode="br" nodeLabel="34.0" m_display="0" m_topoIndex="144" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="30" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>30</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="122" name="block_122" type="BlockType">
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="trunc_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln29_fu_579_p1" coreId="825045296" contextFuncName="simd_array" bitwidth="5" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="shl_ln1" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="shl_ln1_fu_582_p3" coreId="1599296852" contextFuncName="simd_array" bitwidth="7" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="zext_ln29_fu_590_p1" coreId="3712271400" contextFuncName="simd_array" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="add_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln29_fu_594_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="trunc_ln3" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln3_fu_599_p4" coreId="3712284176" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="sext_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln29_fu_609_p1" coreId="3712231040" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="gmem0_addr_4" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="gmem0_load_2_req" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="gmem0_addr_4_read" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="110" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="bitcast_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="grp_fu_330_p0" coreId="3712209904" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="add_ln29_1" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln29_1_fu_619_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="trunc_ln29_1" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln29_1_fu_624_p4" coreId="3711639920" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="sext_ln29_1" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln29_1_fu_634_p1" coreId="128" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="gmem1_addr_2" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="gmem1_load_2_req" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="gmem1_addr_2_read" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="111" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="bitcast_ln29_1" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="grp_fu_330_p1" coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="mul" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_5_max_dsp_1_U2" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="simd_array" bitwidth="32" opcode="fmul" nodeLabel="13.0" nodeLatency="4" m_display="0" m_delay="1.86" m_topoIndex="121" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="add_ln29_2" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln29_2_fu_644_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="bitcast_ln29_2" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln29_2_fu_885_p1" coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="29.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="trunc_ln29_2" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln29_2_fu_649_p4" coreId="0" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="sext_ln29_2" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln29_2_fu_659_p1" coreId="3712229104" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="gmem0_addr_5" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>writereq</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>writeresp</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="gmem0_addr_5_req" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writereq" nodeLabel="28.0" m_display="0" m_delay="2.19" m_topoIndex="129" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="gmem0_addr_5_write_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" opcode="write" nodeLabel="29.0" m_display="0" m_delay="2.19" m_topoIndex="135" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="gmem0_addr_5_resp" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writeresp" nodeLabel="30.0" nodeLatency="4" m_display="0" m_delay="2.19" m_topoIndex="141" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="br_ln29" lineNumber="29" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3712297816" contextFuncName="simd_array" opcode="br" nodeLabel="34.0" m_display="0" m_topoIndex="145" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="29" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>29</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="150" name="block_150" type="BlockType">
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="trunc_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln28_fu_669_p1" coreId="3712298304" contextFuncName="simd_array" bitwidth="5" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="shl_ln" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="shl_ln_fu_672_p3" coreId="128" contextFuncName="simd_array" bitwidth="7" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="zext_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="zext_ln28_fu_680_p1" coreId="0" contextFuncName="simd_array" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="add_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln28_fu_684_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="trunc_ln2" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln2_fu_689_p4" coreId="3712300400" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="sext_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln28_fu_699_p1" coreId="0" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="gmem0_addr_2" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3712301952" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="gmem0_load_1_req" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="104" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="gmem0_addr_2_read" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="112" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="bitcast_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln28_fu_865_p1" coreId="3712244816" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="122" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="add_ln28_1" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln28_1_fu_709_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="trunc_ln28_1" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln28_1_fu_714_p4" coreId="0" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="sext_ln28_1" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln28_1_fu_724_p1" coreId="0" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="gmem1_addr_1" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="3712219376" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="gmem1_load_1_req" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="gmem1_addr_1_read" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="113" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="bitcast_ln28_1" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln28_1_fu_869_p1" coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="add9" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_10_full_dsp_1_U1" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="simd_array" bitwidth="32" opcode="fadd" nodeLabel="13.0" nodeLatency="9" m_display="0" m_delay="1.6" m_topoIndex="124" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="add_ln28_2" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln28_2_fu_734_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="bitcast_ln28_2" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln28_2_fu_889_p1" coreId="3712311616" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="29.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="trunc_ln28_2" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln28_2_fu_739_p4" coreId="384" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="sext_ln28_2" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln28_2_fu_749_p1" coreId="0" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="gmem0_addr_3" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="1953394531" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>writereq</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>writeresp</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="146" name="gmem0_addr_3_req" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writereq" nodeLabel="28.0" m_display="0" m_delay="2.19" m_topoIndex="130" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="gmem0_addr_3_write_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" opcode="write" nodeLabel="29.0" m_display="0" m_delay="2.19" m_topoIndex="137" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="148" name="gmem0_addr_3_resp" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writeresp" nodeLabel="30.0" nodeLatency="4" m_display="0" m_delay="2.19" m_topoIndex="142" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="149" name="br_ln28" lineNumber="28" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="0" contextFuncName="simd_array" opcode="br" nodeLabel="34.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="28" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>28</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="178" name="block_178" type="BlockType">
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split._crit_edge</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="151" name="trunc_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln31_fu_759_p1" coreId="3712317440" contextFuncName="simd_array" bitwidth="5" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="shl_ln31_1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="shl_ln31_1_fu_762_p3" coreId="3712318936" contextFuncName="simd_array" bitwidth="7" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="zext_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="zext_ln31_fu_770_p1" coreId="3712319984" contextFuncName="simd_array" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="add_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln31_fu_774_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="88" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="trunc_ln1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln1_fu_779_p4" coreId="3442337806" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="156" name="sext_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln31_fu_789_p1" coreId="1165285027" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="157" name="gmem0_addr" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="1785476857" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="158" name="gmem0_load_req" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="106" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="159" name="gmem0_addr_read" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="114" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="160" name="bitcast_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln31_fu_873_p1" coreId="347833658" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="161" name="add_ln31_1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln31_1_fu_799_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="92" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="162" name="trunc_ln31_1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln31_1_fu_804_p4" coreId="0" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="163" name="sext_ln31_1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln31_1_fu_814_p1" coreId="0" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="gmem1_addr" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="0" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem1</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="165" name="gmem1_load_req" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="readreq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="readreq" nodeLabel="5.0" nodeLatency="6" m_display="0" m_delay="2.19" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="166" name="gmem1_addr_read" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" bitwidth="32" opcode="read" nodeLabel="12.0" m_display="0" m_delay="2.19" m_topoIndex="115" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="bitcast_ln31_1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln31_1_fu_877_p1" coreId="91696" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="13.0" m_display="0" m_topoIndex="126" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="168" name="add" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_10_full_dsp_1_U1" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="simd_array" bitwidth="32" opcode="fadd" nodeLabel="13.0" nodeLatency="9" m_display="0" m_delay="1.6" m_topoIndex="127" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="169" name="add_ln31_2" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln31_2_fu_824_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.14" m_topoIndex="96" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="bitcast_ln31_2" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="bitcast_ln31_2_fu_894_p1" coreId="240" contextFuncName="simd_array" bitwidth="32" opcode="bitcast" nodeLabel="29.0" m_display="0" m_topoIndex="138" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="171" name="trunc_ln31_2" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="trunc_ln31_2_fu_829_p4" coreId="95792" contextFuncName="simd_array" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="172" name="sext_ln31_2" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="sext_ln31_2_fu_839_p1" coreId="0" contextFuncName="simd_array" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="173" name="gmem0_addr_1" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="588777452" contextFuncName="simd_array" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>writereq</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>writeresp</dataOutputObjs>
+        <dataOutputObjs>gmem0</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="174" name="gmem0_addr_1_req" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writereq" nodeLabel="28.0" m_display="0" m_delay="2.19" m_topoIndex="131" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="175" name="gmem0_addr_1_write_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="no" coreId="121" contextFuncName="simd_array" opcode="write" nodeLabel="29.0" m_display="0" m_delay="2.19" m_topoIndex="139" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="gmem0_addr_1_resp" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="writereq" coreId="121" contextFuncName="simd_array" bitwidth="1" opcode="writeresp" nodeLabel="30.0" nodeLatency="4" m_display="0" m_delay="2.19" m_topoIndex="143" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="177" name="br_ln31" lineNumber="31" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="0" contextFuncName="simd_array" opcode="br" nodeLabel="34.0" m_display="0" m_topoIndex="147" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="31" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <controlInputObjs>.split._crit_edge</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>31</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="184" name=".split._crit_edge" type="BlockType">
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlInputObjs>block_94</controlInputObjs>
+      <controlInputObjs>block_122</controlInputObjs>
+      <controlInputObjs>block_150</controlInputObjs>
+      <controlInputObjs>block_178</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>block_49</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="add_ln25" lineNumber="25" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." rtlName="add_ln25_fu_442_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="simd_array" bitwidth="6" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.7" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="25" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="180" name="indvar_flatten_write_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="1058" contextFuncName="simd_array" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.38" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="181" name="i_write_ln23" lineNumber="23" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="simd_array" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.38" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="23" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="182" name="k_write_ln25" lineNumber="25" fileName="simdArray_simple/simdArray.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="simd_array" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.38" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="simdArray_simple/simdArray.cpp" linenumber="25" fileDirectory="/home/handengke/HLS" functionName="simd_array"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="183" name="br_ln0" coreId="4294967295" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_49</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="simdArray_simple/simdArray.cpp">
+        <validLinenumbers>25</validLinenumbers>
+        <validLinenumbers>23</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <ScheduleInfo time="31"/>
+  <ScheduleInfo time="32"/>
+  <ScheduleInfo time="33"/>
+  <ScheduleInfo time="34"/>
+  <ScheduleInfo time="35"/>
+  <regnodes realName="gmem0_addr_4_read_reg_1071">
+    <nodeIds>103</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln23_4_reg_981">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_1_reg_1031">
+    <nodeIds>136</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_6_reg_989">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_read_reg_1091">
+    <nodeIds>159</nodeIds>
+  </regnodes>
+  <regnodes realName="din_a_read_reg_934">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln31_1_reg_1136">
+    <nodeIds>167</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_read_reg_1096">
+    <nodeIds>166</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln29_1_reg_1116">
+    <nodeIds>111</nodeIds>
+  </regnodes>
+  <regnodes realName="opcode_read_reg_920">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln23_3_reg_973">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_2_read_reg_1076">
+    <nodeIds>110</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_2_reg_1025">
+    <nodeIds>129</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_1_read_reg_1086">
+    <nodeIds>138</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten_reg_913">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln28_reg_1121">
+    <nodeIds>132</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln_reg_939">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln30_1_reg_1106">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_338">
+    <nodeIds>140</nodeIds>
+    <nodeIds>168</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_1_reg_1055">
+    <nodeIds>173</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_reg_1049">
+    <nodeIds>164</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln28_1_reg_1126">
+    <nodeIds>139</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_3_reg_1037">
+    <nodeIds>145</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_2_reg_1013">
+    <nodeIds>108</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_906">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln30_reg_1101">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_3_read_reg_1066">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="out_read_reg_924">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="din_b_read_reg_929">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_7_reg_1001">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem1_addr_3_reg_995">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln23_reg_952">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln23_2_reg_965">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln29_reg_1111">
+    <nodeIds>104</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln31_reg_1131">
+    <nodeIds>160</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_5_reg_1019">
+    <nodeIds>117</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln23_reg_960">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_2_read_reg_1081">
+    <nodeIds>131</nodeIds>
+  </regnodes>
+  <regnodes realName="k_reg_899">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_reg_1141">
+    <nodeIds>112</nodeIds>
+  </regnodes>
+  <regnodes realName="div_reg_1146">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_944">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_6_read_reg_1061">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_reg_1043">
+    <nodeIds>157</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem0_addr_4_reg_1007">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <expressionNodes realName="zext_ln29_fu_590">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln31_2_fu_824">
+    <nodeIds>169</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem1_addr_1_fu_728">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln_fu_672">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_4_fu_484">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln29_fu_857">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln30_fu_489">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln30_2_fu_881">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln1_fu_779">
+    <nodeIds>155</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_3_fu_753">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_3_fu_479">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln31_fu_873">
+    <nodeIds>160</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_2_fu_474">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_1_fu_398">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln1_fu_582">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln28_fu_669">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln28_1_fu_709">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln29_1_fu_634">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln28_1_fu_869">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln28_2_fu_734">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln28_fu_680">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln28_2_fu_889">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln23_1_fu_470">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln4_fu_509">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln30_fu_504">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_128">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln28_2_fu_739">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_382">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem1_addr_2_fu_638">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln23_fu_393">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln31_fu_759">
+    <nodeIds>151</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln28_fu_865">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_fu_124">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln28_1_fu_714">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_6_fu_523">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln31_1_fu_804">
+    <nodeIds>162</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln2_fu_492">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln29_1_fu_861">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln29_2_fu_885">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln30_1_fu_544">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln23_fu_416">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln29_fu_579">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln30_2_fu_569">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln23_fu_373">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_fu_793">
+    <nodeIds>157</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten_fu_132">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln30_1_fu_529">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln30_fu_849">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln31_2_fu_894">
+    <nodeIds>170</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln31_1_fu_877">
+    <nodeIds>167</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln29_fu_594">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln31_2_fu_829">
+    <nodeIds>171</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln29_1_fu_619">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln31_fu_774">
+    <nodeIds>154</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln30_fu_519">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln3_fu_599">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_348">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln23_1_fu_430">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem1_addr_fu_818">
+    <nodeIds>164</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_4_fu_613">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln31_1_fu_762">
+    <nodeIds>152</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_5_fu_424">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem1_addr_3_fu_548">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_5_fu_663">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln28_fu_699">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln30_1_fu_853">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln30_2_fu_554">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln30_fu_500">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln20_fu_342">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln28_fu_684">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln25_fu_442">
+    <nodeIds>179</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln29_2_fu_659">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_2_fu_703">
+    <nodeIds>129</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln29_1_fu_624">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln28_1_fu_724">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln29_2_fu_649">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln25_fu_410">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln28_2_fu_749">
+    <nodeIds>144</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln23_fu_438">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_7_fu_573">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln29_fu_609">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln2_fu_689">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_1_fu_843">
+    <nodeIds>173</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln31_fu_789">
+    <nodeIds>156</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln30_1_fu_534">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln30_2_fu_559">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln31_fu_770">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln31_2_fu_839">
+    <nodeIds>172</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln31_mid2_v_v_fu_463">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln31_1_fu_799">
+    <nodeIds>161</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln29_2_fu_644">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln31_1_fu_814">
+    <nodeIds>163</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln23_fu_376">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_326">
+    <nodeIds>140</nodeIds>
+    <nodeIds>168</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_334">
+    <nodeIds>84</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_330">
+    <nodeIds>112</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="write_ln31_write_fu_314">
+    <nodeIds>175</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_load_load_fu_407">
+    <nodeIds>51</nodeIds>
+  </ioNodes>
+  <ioNodes realName="size_read_read_fu_142">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem1_addr_3_read_read_fu_227">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem1_addr_read_read_fu_257">
+    <nodeIds>166</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_180">
+    <nodeIds>102</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_453">
+    <nodeIds>181</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_283">
+    <nodeIds>174</nodeIds>
+    <nodeIds>176</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_368">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_166">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_187">
+    <nodeIds>109</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem0_addr_6_read_read_fu_222">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_448">
+    <nodeIds>180</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_201">
+    <nodeIds>137</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_208">
+    <nodeIds>158</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_269">
+    <nodeIds>118</nodeIds>
+    <nodeIds>120</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem0_addr_4_read_read_fu_232">
+    <nodeIds>103</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten_load_load_fu_390">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <ioNodes realName="k_load_load_fu_404">
+    <nodeIds>50</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem1_addr_1_read_read_fu_247">
+    <nodeIds>138</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem0_addr_2_read_read_fu_242">
+    <nodeIds>131</nodeIds>
+  </ioNodes>
+  <ioNodes realName="out_read_read_fu_148">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_262">
+    <nodeIds>90</nodeIds>
+    <nodeIds>92</nodeIds>
+  </ioNodes>
+  <ioNodes realName="opcode_read_read_fu_136">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="din_a_read_read_fu_160">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="din_b_read_read_fu_154">
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln25_store_fu_458">
+    <nodeIds>182</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_173">
+    <nodeIds>81</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_363">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln29_write_fu_298">
+    <nodeIds>119</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_194">
+    <nodeIds>130</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem0_addr_read_read_fu_252">
+    <nodeIds>159</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln30_write_fu_290">
+    <nodeIds>91</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_358">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_215">
+    <nodeIds>165</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem1_addr_2_read_read_fu_237">
+    <nodeIds>110</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_276">
+    <nodeIds>146</nodeIds>
+    <nodeIds>148</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln28_write_fu_306">
+    <nodeIds>147</nodeIds>
+  </ioNodes>
+  <ioPorts name="din_a">
+    <contents name="read">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="din_b">
+    <contents name="read">
+      <nodeIds>32</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem0">
+    <contents name="read">
+      <nodeIds>131</nodeIds>
+      <nodeIds>103</nodeIds>
+      <nodeIds>75</nodeIds>
+      <nodeIds>159</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>130</nodeIds>
+      <nodeIds>102</nodeIds>
+      <nodeIds>74</nodeIds>
+      <nodeIds>158</nodeIds>
+    </contents>
+    <contents name="write">
+      <nodeIds>147</nodeIds>
+      <nodeIds>119</nodeIds>
+      <nodeIds>91</nodeIds>
+      <nodeIds>175</nodeIds>
+    </contents>
+    <contents name="writereq">
+      <nodeIds>146</nodeIds>
+      <nodeIds>118</nodeIds>
+      <nodeIds>90</nodeIds>
+      <nodeIds>174</nodeIds>
+    </contents>
+    <contents name="writeresp">
+      <nodeIds>148</nodeIds>
+      <nodeIds>120</nodeIds>
+      <nodeIds>92</nodeIds>
+      <nodeIds>176</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem1">
+    <contents name="read">
+      <nodeIds>138</nodeIds>
+      <nodeIds>110</nodeIds>
+      <nodeIds>82</nodeIds>
+      <nodeIds>166</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>137</nodeIds>
+      <nodeIds>109</nodeIds>
+      <nodeIds>81</nodeIds>
+      <nodeIds>165</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="opcode">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_r">
+    <contents name="read">
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="size">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="179" stage="1" latency="1"/>
+      <operations id="180" stage="1" latency="1"/>
+      <operations id="181" stage="1" latency="1"/>
+      <operations id="182" stage="1" latency="1"/>
+      <operations id="183" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="1"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+      <operations id="155" stage="1" latency="1"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="157" stage="1" latency="1"/>
+      <operations id="161" stage="1" latency="1"/>
+      <operations id="162" stage="1" latency="1"/>
+      <operations id="163" stage="1" latency="1"/>
+      <operations id="164" stage="1" latency="1"/>
+      <operations id="169" stage="1" latency="1"/>
+      <operations id="171" stage="1" latency="1"/>
+      <operations id="172" stage="1" latency="1"/>
+      <operations id="173" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="74" stage="7" latency="7"/>
+      <operations id="81" stage="7" latency="7"/>
+      <operations id="102" stage="7" latency="7"/>
+      <operations id="109" stage="7" latency="7"/>
+      <operations id="130" stage="7" latency="7"/>
+      <operations id="137" stage="7" latency="7"/>
+      <operations id="158" stage="7" latency="7"/>
+      <operations id="165" stage="7" latency="7"/>
+    </states>
+    <states id="7">
+      <operations id="74" stage="6" latency="7"/>
+      <operations id="81" stage="6" latency="7"/>
+      <operations id="102" stage="6" latency="7"/>
+      <operations id="109" stage="6" latency="7"/>
+      <operations id="130" stage="6" latency="7"/>
+      <operations id="137" stage="6" latency="7"/>
+      <operations id="158" stage="6" latency="7"/>
+      <operations id="165" stage="6" latency="7"/>
+    </states>
+    <states id="8">
+      <operations id="74" stage="5" latency="7"/>
+      <operations id="81" stage="5" latency="7"/>
+      <operations id="102" stage="5" latency="7"/>
+      <operations id="109" stage="5" latency="7"/>
+      <operations id="130" stage="5" latency="7"/>
+      <operations id="137" stage="5" latency="7"/>
+      <operations id="158" stage="5" latency="7"/>
+      <operations id="165" stage="5" latency="7"/>
+    </states>
+    <states id="9">
+      <operations id="74" stage="4" latency="7"/>
+      <operations id="81" stage="4" latency="7"/>
+      <operations id="102" stage="4" latency="7"/>
+      <operations id="109" stage="4" latency="7"/>
+      <operations id="130" stage="4" latency="7"/>
+      <operations id="137" stage="4" latency="7"/>
+      <operations id="158" stage="4" latency="7"/>
+      <operations id="165" stage="4" latency="7"/>
+    </states>
+    <states id="10">
+      <operations id="74" stage="3" latency="7"/>
+      <operations id="81" stage="3" latency="7"/>
+      <operations id="102" stage="3" latency="7"/>
+      <operations id="109" stage="3" latency="7"/>
+      <operations id="130" stage="3" latency="7"/>
+      <operations id="137" stage="3" latency="7"/>
+      <operations id="158" stage="3" latency="7"/>
+      <operations id="165" stage="3" latency="7"/>
+    </states>
+    <states id="11">
+      <operations id="74" stage="2" latency="7"/>
+      <operations id="81" stage="2" latency="7"/>
+      <operations id="102" stage="2" latency="7"/>
+      <operations id="109" stage="2" latency="7"/>
+      <operations id="130" stage="2" latency="7"/>
+      <operations id="137" stage="2" latency="7"/>
+      <operations id="158" stage="2" latency="7"/>
+      <operations id="165" stage="2" latency="7"/>
+    </states>
+    <states id="12">
+      <operations id="74" stage="1" latency="7"/>
+      <operations id="81" stage="1" latency="7"/>
+      <operations id="102" stage="1" latency="7"/>
+      <operations id="109" stage="1" latency="7"/>
+      <operations id="130" stage="1" latency="7"/>
+      <operations id="137" stage="1" latency="7"/>
+      <operations id="158" stage="1" latency="7"/>
+      <operations id="165" stage="1" latency="7"/>
+    </states>
+    <states id="13">
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="159" stage="1" latency="1"/>
+      <operations id="166" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="16" latency="16"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="5" latency="5"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="10" latency="10"/>
+      <operations id="160" stage="1" latency="1"/>
+      <operations id="167" stage="1" latency="1"/>
+      <operations id="168" stage="10" latency="10"/>
+    </states>
+    <states id="15">
+      <operations id="84" stage="15" latency="16"/>
+      <operations id="112" stage="4" latency="5"/>
+      <operations id="140" stage="9" latency="10"/>
+      <operations id="168" stage="9" latency="10"/>
+    </states>
+    <states id="16">
+      <operations id="84" stage="14" latency="16"/>
+      <operations id="112" stage="3" latency="5"/>
+      <operations id="140" stage="8" latency="10"/>
+      <operations id="168" stage="8" latency="10"/>
+    </states>
+    <states id="17">
+      <operations id="84" stage="13" latency="16"/>
+      <operations id="112" stage="2" latency="5"/>
+      <operations id="140" stage="7" latency="10"/>
+      <operations id="168" stage="7" latency="10"/>
+    </states>
+    <states id="18">
+      <operations id="84" stage="12" latency="16"/>
+      <operations id="112" stage="1" latency="5"/>
+      <operations id="140" stage="6" latency="10"/>
+      <operations id="168" stage="6" latency="10"/>
+    </states>
+    <states id="19">
+      <operations id="84" stage="11" latency="16"/>
+      <operations id="140" stage="5" latency="10"/>
+      <operations id="168" stage="5" latency="10"/>
+    </states>
+    <states id="20">
+      <operations id="84" stage="10" latency="16"/>
+      <operations id="140" stage="4" latency="10"/>
+      <operations id="168" stage="4" latency="10"/>
+    </states>
+    <states id="21">
+      <operations id="84" stage="9" latency="16"/>
+      <operations id="140" stage="3" latency="10"/>
+      <operations id="168" stage="3" latency="10"/>
+    </states>
+    <states id="22">
+      <operations id="84" stage="8" latency="16"/>
+      <operations id="140" stage="2" latency="10"/>
+      <operations id="168" stage="2" latency="10"/>
+    </states>
+    <states id="23">
+      <operations id="84" stage="7" latency="16"/>
+      <operations id="140" stage="1" latency="10"/>
+      <operations id="168" stage="1" latency="10"/>
+    </states>
+    <states id="24">
+      <operations id="84" stage="6" latency="16"/>
+    </states>
+    <states id="25">
+      <operations id="84" stage="5" latency="16"/>
+    </states>
+    <states id="26">
+      <operations id="84" stage="4" latency="16"/>
+    </states>
+    <states id="27">
+      <operations id="84" stage="3" latency="16"/>
+    </states>
+    <states id="28">
+      <operations id="84" stage="2" latency="16"/>
+    </states>
+    <states id="29">
+      <operations id="84" stage="1" latency="16"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="174" stage="1" latency="1"/>
+    </states>
+    <states id="30">
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="147" stage="1" latency="1"/>
+      <operations id="170" stage="1" latency="1"/>
+      <operations id="175" stage="1" latency="1"/>
+    </states>
+    <states id="31">
+      <operations id="92" stage="5" latency="5"/>
+      <operations id="120" stage="5" latency="5"/>
+      <operations id="148" stage="5" latency="5"/>
+      <operations id="176" stage="5" latency="5"/>
+    </states>
+    <states id="32">
+      <operations id="92" stage="4" latency="5"/>
+      <operations id="120" stage="4" latency="5"/>
+      <operations id="148" stage="4" latency="5"/>
+      <operations id="176" stage="4" latency="5"/>
+    </states>
+    <states id="33">
+      <operations id="92" stage="3" latency="5"/>
+      <operations id="120" stage="3" latency="5"/>
+      <operations id="148" stage="3" latency="5"/>
+      <operations id="176" stage="3" latency="5"/>
+    </states>
+    <states id="34">
+      <operations id="92" stage="2" latency="5"/>
+      <operations id="120" stage="2" latency="5"/>
+      <operations id="148" stage="2" latency="5"/>
+      <operations id="176" stage="2" latency="5"/>
+    </states>
+    <states id="35">
+      <operations id="92" stage="1" latency="5"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="5"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="5"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="176" stage="1" latency="5"/>
+      <operations id="177" stage="1" latency="1"/>
+    </states>
+    <states id="36">
+      <operations id="185" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="31" outState="32">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="32" outState="33">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="33" outState="34">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="34" outState="35">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="35" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="36">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="simd_array" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1" mMaxLatency="1">
+      <basicBlocks>43</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="loop1_loop2" mII="1" mDepth="33" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>49</basicBlocks>
+      <basicBlocks>66</basicBlocks>
+      <basicBlocks>94</basicBlocks>
+      <basicBlocks>122</basicBlocks>
+      <basicBlocks>150</basicBlocks>
+      <basicBlocks>178</basicBlocks>
+      <basicBlocks>184</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>186</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

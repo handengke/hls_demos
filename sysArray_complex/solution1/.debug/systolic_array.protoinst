@@ -1,0 +1,100 @@
+{
+	"version": "1.0",
+	"modules": {
+		"systolic_array": {
+			"proto_instances": {
+				"/AESL_inst_systolic_array_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst_n"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/Loop_1_proc1_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_1_fu_16582/grp_Loop_1_proc1_Pipeline_1_fu_16582_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_112_2_fu_16634/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_112_2_fu_16634_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_117_4_fu_18691/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_117_4_fu_18691_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_210_6_fu_22835/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_210_6_fu_22835_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_21_fu_22853/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_21_fu_22853_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_16608/grp_Loop_1_proc1_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_16608_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"Loop_1_proc1_U0/grp_Loop_1_proc1_Pipeline_sysarray_outer_loop1_fu_20748/grp_Loop_1_proc1_Pipeline_sysarray_outer_loop1_fu_20748_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

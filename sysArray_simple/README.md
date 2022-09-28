@@ -1,0 +1,2 @@
+## Systolic Array Implemented By HLS
+This is a simple example of using HLS for hardware design, in which a systolic array is implemented totally in cpp. As this project is to run through the overall development process, it is only a simple example, and only supports matrix multiplication of fixed size matrices.

@@ -1,0 +1,130 @@
+
+
+================================================================
+== Synthesis Summary Report of 'systolic_array'
+================================================================
++ General Information: 
+    * Date:           Wed Sep 28 12:36:50 2022
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+    * Project:        sysArray_complex
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu50-fsvh2104-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----------+--------------+------------+-----+
+    |                                 Modules                                 |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |          |              |            |     |
+    |                                 & Loops                                 |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP   |      FF      |     LUT    | URAM|
+    +-------------------------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----------+--------------+------------+-----+
+    |+ systolic_array*                                                        |  Timing|  -0.00|        -|       -|         -|        -|     -|  dataflow|  2 (~0%)|   69 (1%)|  205979 (11%)|  50212 (5%)|    -|
+    | + grp_Loop_1_proc1_fu_148                                               |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|        -|   69 (1%)|  204755 (11%)|  48653 (5%)|    -|
+    |  + grp_Loop_1_proc1_Pipeline_1_fu_16582                                 |       -|   1.46|       11|  33.000|         -|       11|     -|        no|        -|         -|       9 (~0%)|   366 (~0%)|    -|
+    |   o Loop 1                                                              |      II|   2.19|        9|  27.000|         2|        2|     4|       yes|        -|         -|             -|           -|    -|
+    |  + grp_Loop_1_proc1_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_16608   |       -|   0.45|       18|  54.000|         -|       18|     -|        no|        -|         -|      13 (~0%)|   120 (~0%)|    -|
+    |   o VITIS_LOOP_41_1_VITIS_LOOP_42_2                                     |       -|   2.19|       16|  48.000|         1|        1|    16|       yes|        -|         -|             -|           -|    -|
+    |  + grp_Loop_1_proc1_Pipeline_VITIS_LOOP_112_2_fu_16634                  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|        -|         -|    32858 (1%)|   9345 (1%)|    -|
+    |   o VITIS_LOOP_112_2                                                    |       -|   2.19|        -|       -|         3|        1|     -|       yes|        -|         -|             -|           -|    -|
+    |  + grp_Loop_1_proc1_Pipeline_VITIS_LOOP_117_4_fu_18691                  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|        -|         -|    32858 (1%)|   9345 (1%)|    -|
+    |   o VITIS_LOOP_117_4                                                    |       -|   2.19|        -|       -|         3|        1|     -|       yes|        -|         -|             -|           -|    -|
+    |  + grp_Loop_1_proc1_Pipeline_sysarray_outer_loop1_fu_20748              |       -|   0.09|        -|       -|         -|        -|     -|        no|        -|  45 (~0%)|    5107 (~0%)|  24901 (2%)|    -|
+    |   o sysarray_outer_loop1                                                |      II|   2.19|        -|       -|        12|        4|     -|       yes|        -|         -|             -|           -|    -|
+    |  + grp_Loop_1_proc1_Pipeline_VITIS_LOOP_210_6_fu_22835                  |  Timing|  -0.00|       24|  72.000|         -|       24|     -|        no|        -|         -|     207 (~0%)|   479 (~0%)|    -|
+    |   o VITIS_LOOP_210_6                                                    |      II|   2.19|       22|  66.000|        11|        4|     4|       yes|        -|         -|             -|           -|    -|
+    |  + grp_Loop_1_proc1_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_21_fu_22853  |       -|   0.45|       18|  54.000|         -|       18|     -|        no|        -|         -|      13 (~0%)|   120 (~0%)|    -|
+    |   o VITIS_LOOP_41_1_VITIS_LOOP_42_2                                     |       -|   2.19|       16|  48.000|         1|        1|    16|       yes|        -|         -|             -|           -|    -|
+    |  o VITIS_LOOP_111_1                                                     |       -|   2.19|        -|       -|         -|        -|     -|        no|        -|         -|             -|           -|    -|
+    |  o VITIS_LOOP_116_3                                                     |       -|   2.19|        -|       -|         -|        -|     -|        no|        -|         -|             -|           -|    -|
+    |  o top_outer_loop1_VITIS_LOOP_140_5                                     |       -|   2.19|        -|       -|         -|        -|     -|        no|        -|         -|             -|           -|    -|
+    +-------------------------------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----------+--------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| din_a    | inout     | unsigned int* |
+| din_b    | inout     | unsigned int* |
+| ra       | in        | unsigned int  |
+| ca       | in        | unsigned int  |
+| cb       | in        | unsigned int  |
+| out      | inout     | unsigned int* |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+-----------------------+-----------+----------+-----------------------+
+| Argument | HW Name               | HW Type   | HW Usage | HW Info               |
++----------+-----------------------+-----------+----------+-----------------------+
+| din_a    | m_axi_gmem            | interface |          |                       |
+| din_a    | s_axi_control din_a_1 | register  | offset   | offset=0x10, range=32 |
+| din_a    | s_axi_control din_a_2 | register  | offset   | offset=0x14, range=32 |
+| din_b    | m_axi_gmem            | interface |          |                       |
+| din_b    | s_axi_control din_b_1 | register  | offset   | offset=0x1c, range=32 |
+| din_b    | s_axi_control din_b_2 | register  | offset   | offset=0x20, range=32 |
+| ra       | s_axi_control ra      | register  |          | offset=0x28, range=32 |
+| ca       | s_axi_control ca      | register  |          | offset=0x30, range=32 |
+| cb       | s_axi_control cb      | register  |          | offset=0x38, range=32 |
+| out      | m_axi_gmem            | interface |          |                       |
+| out      | s_axi_control out_r_1 | register  | offset   | offset=0x40, range=32 |
+| out      | s_axi_control out_r_2 | register  | offset   | offset=0x44, range=32 |
++----------+-----------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+* Burst Summary
++--------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+| HW Interface | Loop             | Message                                                                                                                                                                                                                       | Location                             |
++--------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+| m_axi_gmem   | VITIS_LOOP_112_2 | Multiple burst reads of variable length and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | sysArray_complex/sysArray.cpp:112:24 |
+| m_axi_gmem   | VITIS_LOOP_117_4 | Multiple burst reads of variable length and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. | sysArray_complex/sysArray.cpp:117:24 |
+| m_axi_gmem   | VITIS_LOOP_211_7 | Multiple burst writes of length 4 and bit width 32. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.       | sysArray_complex/sysArray.cpp:211:35 |
++--------------+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+
+* Bursts and Widening Missed
++--------------+----------+------------------+-------------------------------------------------------------------------------------------------------------------+------------+--------------------------------------+
+| HW Interface | Variable | Loop             | Problem                                                                                                           | Resolution | Location                             |
++--------------+----------+------------------+-------------------------------------------------------------------------------------------------------------------+------------+--------------------------------------+
+| m_axi_gmem   | out      | VITIS_LOOP_210_6 | Stride is incompatible                                                                                            | 214-230    | sysArray_complex/sysArray.cpp:210:31 |
+| m_axi_gmem   | din_a    |                  | Could not widen since the size of type 'i32' is greater than or equal to the max_widen_bitwidth threshold of '0'. |            | sysArray_complex/sysArray.cpp:112:24 |
+| m_axi_gmem   | din_b    |                  | Could not widen since the size of type 'i32' is greater than or equal to the max_widen_bitwidth threshold of '0'. |            | sysArray_complex/sysArray.cpp:117:24 |
+| m_axi_gmem   | out      |                  | Could not widen since the size of type 'i32' is greater than or equal to the max_widen_bitwidth threshold of '0'. |            | sysArray_complex/sysArray.cpp:211:35 |
++--------------+----------+------------------+-------------------------------------------------------------------------------------------------------------------+------------+--------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+

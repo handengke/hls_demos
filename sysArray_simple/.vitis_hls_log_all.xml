@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.995+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_BREADY' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.886+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWUSER' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.882+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWREGION' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.875+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWQOS' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.869+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWPROT' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.863+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWCACHE' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.858+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWLOCK' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.853+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWBURST' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.848+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWSIZE' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.843+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWLEN' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.838+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWID' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.834+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWADDR' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.828+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6/m_axi_gmem_AWVALID' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:36.822+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_107_3_VITIS_LOOP_108_4/m_axi_gmem_ARUSER' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:35.024+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'systolic_array_Pipeline_VITIS_LOOP_107_3_VITIS_LOOP_108_4/m_axi_gmem_ARREGION' to 0." projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:01:35.018+0800" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="sysArray_simple" solutionName="solution1" date="2022-09-28T10:03:04.159+0800" type="Warning"/>
+      </simLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

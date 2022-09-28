@@ -1,0 +1,129 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2021.1</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>3.000</TargetClockPeriod>
+  <AchievedClockPeriod>1.941</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>1.941</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>1.941</CP_SYNTH>
+  <CP_TARGET>3.000</CP_TARGET>
+  <SLACK_FINAL>1.059</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>1.059</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>1.059</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>1.059</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>3</BRAM>
+    <CLB>0</CLB>
+    <DSP>5</DSP>
+    <FF>5981</FF>
+    <LATCH>0</LATCH>
+    <LUT>3620</LUT>
+    <SRL>548</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>2688</BRAM>
+    <CLB>0</CLB>
+    <DSP>5952</DSP>
+    <FF>1743360</FF>
+    <LUT>871680</LUT>
+    <URAM>640</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="simd_array" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="6">control_s_axi_U fadd_32ns_32ns_32_10_full_dsp_1_U1 fdiv_32ns_32ns_32_16_no_dsp_1_U3 fmul_32ns_32ns_32_5_max_dsp_1_U2 gmem0_m_axi_U gmem1_m_axi_U</SubModules>
+    <Resources BRAM="3" DSP="5" FF="5981" LUT="3620" LogicLUT="3072" RAMB18="3" SRL="548"/>
+    <LocalResources FF="2003" LUT="445" LogicLUT="129" SRL="316"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="simd_array_control_s_axi" DEPTH="1" FILE_NAME="simd_array.v" ORIG_REF_NAME="simd_array_control_s_axi">
+    <Resources FF="311" LUT="328" LogicLUT="328"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_10_full_dsp_1_U1" BINDMODULE="simd_array_fadd_32ns_32ns_32_10_full_dsp_1" DEPTH="1" FILE_NAME="simd_array.v" ORIG_REF_NAME="simd_array_fadd_32ns_32ns_32_10_full_dsp_1">
+    <Resources DSP="2" FF="361" LUT="245" LogicLUT="242" SRL="3"/>
+    <LocalResources FF="96" LUT="50" LogicLUT="50"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fdiv_32ns_32ns_32_16_no_dsp_1_U3" BINDMODULE="simd_array_fdiv_32ns_32ns_32_16_no_dsp_1" DEPTH="1" FILE_NAME="simd_array.v" ORIG_REF_NAME="simd_array_fdiv_32ns_32ns_32_16_no_dsp_1">
+    <Resources FF="795" LUT="804" LogicLUT="770" SRL="34"/>
+    <LocalResources FF="97" LUT="17" LogicLUT="17"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_5_max_dsp_1_U2" BINDMODULE="simd_array_fmul_32ns_32ns_32_5_max_dsp_1" DEPTH="1" FILE_NAME="simd_array.v" ORIG_REF_NAME="simd_array_fmul_32ns_32ns_32_5_max_dsp_1">
+    <Resources DSP="3" FF="153" LUT="103" LogicLUT="103"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="simd_array_gmem0_m_axi" DEPTH="1" FILE_NAME="simd_array.v" ORIG_REF_NAME="simd_array_gmem0_m_axi">
+    <Resources BRAM="2" FF="1564" LUT="1170" LogicLUT="1038" RAMB18="2" SRL="132"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="simd_array_gmem1_m_axi" DEPTH="1" FILE_NAME="simd_array.v" ORIG_REF_NAME="simd_array_gmem1_m_axi">
+    <Resources BRAM="1" FF="794" LUT="525" LogicLUT="462" RAMB18="1" SRL="63"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="1.627" DATAPATH_LOGIC_DELAY="0.412" DATAPATH_NET_DELAY="1.215" ENDPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[11]" LOGIC_LEVELS="5" MAX_FANOUT="9" SLACK="1.059" STARTPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="774"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/m_axi_gmem0_WVALID_INST_0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/bus_equal_gen.WLAST_Dummy_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_43" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_42" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.544" DATAPATH_LOGIC_DELAY="0.380" DATAPATH_NET_DELAY="1.164" ENDPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[12]" LOGIC_LEVELS="5" MAX_FANOUT="9" SLACK="1.147" STARTPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="774"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/m_axi_gmem0_WVALID_INST_0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/bus_equal_gen.WLAST_Dummy_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_43" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_42" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.504" DATAPATH_LOGIC_DELAY="0.329" DATAPATH_NET_DELAY="1.175" ENDPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/DINADIN[0]" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="1.154" STARTPOINT_PIN="bd_0_i/hls_inst/inst/opcode_read_reg_920_reg[12]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/opcode_read_reg_920_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1388"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/fifo_resp_to_user/mem_reg_i_79" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_44" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_24" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.502" DATAPATH_LOGIC_DELAY="0.380" DATAPATH_NET_DELAY="1.122" ENDPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[10]" LOGIC_LEVELS="5" MAX_FANOUT="9" SLACK="1.169" STARTPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/throttl_cnt_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="774"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/m_axi_gmem0_WVALID_INST_0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/wreq_throttle/bus_equal_gen.WLAST_Dummy_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_43" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_42" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="350"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.501" DATAPATH_LOGIC_DELAY="0.329" DATAPATH_NET_DELAY="1.172" ENDPOINT_PIN="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg/DINADIN[7]" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="1.194" STARTPOINT_PIN="bd_0_i/hls_inst/inst/opcode_read_reg_920_reg[12]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/opcode_read_reg_920_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1388"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/fifo_resp_to_user/din0_buf1[31]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/fifo_resp_to_user/mem_reg_i_79" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_44" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg_i_17" PRIMITIVE_TYPE="CLB.LUT.LUT3" LINE_NUMBER="1014"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_write/buff_wdata/mem_reg" PRIMITIVE_TYPE="BLOCKRAM.BRAM.RAMB18E2" LINE_NUMBER="581"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/simd_array_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/simd_array_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/simd_array_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/simd_array_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/simd_array_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/simd_array_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

@@ -1,0 +1,15 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../simdArray_tb.cpp in debug mode
+   Generating csim.exe
+------------------------------
+software result is:
+0	2	6	12	20	30	42	56	72	90	110	132	156	182	210	240	272	306	342	380	420	462	506	552	600	650	702	756	812	870	930	992	
+kernel result is:
+0	2	6	12	20	30	42	56	72	90	110	132	156	182	210	240	272	306	342	380	420	462	506	552	600	650	702	756	812	870	930	992	
+------------------------------
+
+TEST PASSED!
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

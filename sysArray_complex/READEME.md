@@ -1,0 +1,2 @@
+## Systolic Array Implemented By HLS
+This is a simple example of using HLS for hardware design, in which a systolic array is implemented totally in cpp. This version supports more complex MM using input partition approach.

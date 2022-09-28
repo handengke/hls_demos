@@ -1,0 +1,111 @@
+
+
+================================================================
+== Synthesis Summary Report of 'simd_array'
+================================================================
++ General Information: 
+    * Date:           Tue Sep 27 10:29:14 2022
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:07 MDT 2021)
+    * Project:        simdArray_simple
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu50-fsvh2104-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+    |     Modules    |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |         |            |            |     |
+    |     & Loops    |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT    | URAM|
+    +----------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+    |+ simd_array    |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|  4 (~0%)|  5 (~0%)|  3970 (~0%)|  3755 (~0%)|    -|
+    | o loop1_loop2  |       -|   2.19|        -|       -|        33|        1|     -|       yes|        -|        -|           -|           -|    -|
+    +----------------+--------+-------+---------+--------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 1024 -> 32 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 1024 -> 32 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------+
+| Argument | Direction | Datatype            |
++----------+-----------+---------------------+
+| din_a    | inout     | v_datatype*         |
+| din_b    | in        | v_datatype*         |
+| out      | inout     | v_datatype*         |
+| size     | in        | unsigned int const  |
+| opcode   | in        | unsigned int const  |
++----------+-----------+---------------------+
+
+* SW-to-HW Mapping
++----------+-----------------------+-----------+----------+-----------------------+
+| Argument | HW Name               | HW Type   | HW Usage | HW Info               |
++----------+-----------------------+-----------+----------+-----------------------+
+| din_a    | m_axi_gmem0           | interface |          |                       |
+| din_a    | s_axi_control din_a_1 | register  | offset   | offset=0x10, range=32 |
+| din_a    | s_axi_control din_a_2 | register  | offset   | offset=0x14, range=32 |
+| din_b    | m_axi_gmem1           | interface |          |                       |
+| din_b    | s_axi_control din_b_1 | register  | offset   | offset=0x1c, range=32 |
+| din_b    | s_axi_control din_b_2 | register  | offset   | offset=0x20, range=32 |
+| out      | m_axi_gmem0           | interface |          |                       |
+| out      | s_axi_control out_r_1 | register  | offset   | offset=0x28, range=32 |
+| out      | s_axi_control out_r_2 | register  | offset   | offset=0x2c, range=32 |
+| size     | s_axi_control size    | register  |          | offset=0x34, range=32 |
+| opcode   | s_axi_control opcode  | register  |          | offset=0x3c, range=32 |
++----------+-----------------------+-----------+----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+* Bursts and Widening Missed
++--------------+----------+-------+-------------------------------------------+------------+--------------------------------------+
+| HW Interface | Variable | Loop  | Problem                                   | Resolution | Location                             |
++--------------+----------+-------+-------------------------------------------+------------+--------------------------------------+
+| m_axi_gmem0  | din_a    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem1  | din_b    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | out      | loop2 | Access store is in the conditional branch | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | din_a    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem1  | din_b    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | out      | loop2 | Access store is in the conditional branch | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | din_a    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem1  | din_b    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | out      | loop2 | Access store is in the conditional branch | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | din_a    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem1  | din_b    | loop2 | Access load is in the conditional branch  | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
+| m_axi_gmem0  | out      | loop2 | Access store is in the conditional branch | 214-232    | simdArray_simple/simdArray.cpp:25:13 |
++--------------+----------+-------+-------------------------------------------+------------+--------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+

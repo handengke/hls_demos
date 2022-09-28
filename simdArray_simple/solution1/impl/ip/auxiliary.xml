@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="simd_array" xd:componentRef="simd_array" xd:initiationInterval="x" xd:clockPeriod="3" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(din_a)" xd:originalName="din_a" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="inout"/>
+  <xd:arg xd:name="din_a" xd:originalName="din_a" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
+  <xd:arg xd:name="*(din_b)" xd:originalName="din_b" xd:direction="inout" xd:interfaceRef="m_axi_gmem1" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="din_b" xd:originalName="din_b" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem1"/>
+  <xd:arg xd:name="*(out)" xd:originalName="out" xd:direction="inout" xd:interfaceRef="m_axi_gmem0" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="inout"/>
+  <xd:arg xd:name="out" xd:originalName="out" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_gmem0"/>
+  <xd:arg xd:name="size" xd:originalName="size" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x34" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="opcode" xd:originalName="opcode" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x3C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="3755" xd:FF="3970" xd:BRAM="0" xd:DSP="5"/>
+</xd:acceleratorMap>

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# xsim v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Sep 28 10:03:14 2022
+# Process ID: 3486840
+# Current directory: /home/handengke/HLS/sysArray_simple/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/systolic_array/xsim_script.tcl}
+# Log file: /home/handengke/HLS/sysArray_simple/solution1/sim/verilog/xsim.log
+# Journal file: /home/handengke/HLS/sysArray_simple/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/systolic_array/xsim_script.tcl
+open_wave_config systolic_array_dataflow_ana.wcfg
+source systolic_array.tcl

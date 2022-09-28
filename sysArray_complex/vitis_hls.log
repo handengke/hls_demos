@@ -1,0 +1,55 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2021.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'handengke' on host 'c2' (Linux_x86_64 version 5.4.0-125-generic) on Wed Sep 28 12:26:05 CST 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/handengke/HLS/sysArray_complex'
+[2Kvitis_hls> [11C[2Kvitis_hls> e[12C[2Kvitis_hls> ex[13C[2Kvitis_hls> exp[14C[2Kvitis_hls> expo[15C[2Kvitis_hls> expor[16C[2Kvitis_hls> export[17C[2Kvitis_hls> export [18C[2Kvitis_hls> export[17C[2Kvitis_hls> export_[18C[2Kvitis_hls> export_d[19C[2Kvitis_hls> export_de[20C[2Kvitis_hls> export_des[21C[2Kvitis_hls> export_design[24C[2Kvitis_hls> export_design [25C[2Kvitis_hls> export_design -[26C[2Kvitis_hls> export_design -f[27C[2Kvitis_hls> export_design -fr[28C[2Kvitis_hls> export_design -fro[29C[2Kvitis_hls> export_design -from[30C[2Kvitis_hls> export_design -froma[31C[2Kvitis_hls> export_design -fromat[32C[2Kvitis_hls> export_design -fromat [33C[2Kvitis_hls> export_design -fromat x[34C[2Kvitis_hls> export_design -fromat xo[35C[2Kvitis_hls> export_design -fromat x[34C[2Kvitis_hls> export_design -fromat [33C[2Kvitis_hls> export_design -fromat[32C[2Kvitis_hls> export_design -froma[31C[2Kvitis_hls> export_design -from[30C[2Kvitis_hls> export_design -fro[29C[2Kvitis_hls> export_design -fr[28C[2Kvitis_hls> export_design -f[27C[2Kvitis_hls> export_design -fo[28C[2Kvitis_hls> export_design -for[29C[2Kvitis_hls> export_design -form[30C[2Kvitis_hls> export_design -forma[31C[2Kvitis_hls> export_design -format[32C[2Kvitis_hls> export_design -format [33C[2Kvitis_hls> export_design -format x[34C[2Kvitis_hls> export_design -format xo[35C
+INFO: [HLS 200-1510] Running: export_design -format xo 
+INFO: [HLS 200-10] Opening project '/home/handengke/HLS/sysArray_complex'.
+INFO: [HLS 200-10] Opening solution '/home/handengke/HLS/sysArray_complex/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 28 12:26:55 2022...
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 40.05 seconds. CPU system time: 2.97 seconds. Elapsed time: 46.43 seconds; current allocated memory: 337.625 MB.
+Export output file does not exist: /home/handengke/HLS/sysArray_complex/solution1/impl/export.xo
+[2Kvitis_hls> [11C[2Kvitis_hls> c[12C[2Kvitis_hls> co[13C[2Kvitis_hls> con[14C[2Kvitis_hls> confi[16C[2Kvitis_hls> config[17C[2Kvitis_hls> config_[18C[2Kvitis_hls> config_e[19C[2Kvitis_hls> config_export[24C[2Kvitis_hls> config_export [25C[2Kvitis_hls> config_export -[26C[2Kvitis_hls> config_export -f[27C[2Kvitis_hls> config_export -fo[28C[2Kvitis_hls> config_export -for[29C[2Kvitis_hls> config_export -form[30C[2Kvitis_hls> config_export -forma[31C[2Kvitis_hls> config_export -format[32C[2Kvitis_hls> config_export -format [33C[2Kvitis_hls> config_export -format x[34C[2Kvitis_hls> config_export -format xo[35C
+INFO: [HLS 200-1510] Running: config_export -format xo 
+[2Kvitis_hls> [11C[2Kvitis_hls> config_export -format xo[35C[2Kvitis_hls> export_design -format xo[35C
+INFO: [HLS 200-1510] Running: export_design -format xo 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+Running package_xo -xo_path /home/handengke/HLS/sysArray_complex/solution1/impl/export.xo -kernel_name systolic_array -kernel_xml /home/handengke/HLS/sysArray_complex/solution1/impl/ip/../kernel/kernel.xml -kernel_files /home/handengke/HLS/sysArray_complex/sysArray.cpp -ip_directory /home/handengke/HLS/sysArray_complex/solution1/impl/ip/ip_unzip_dir -design_xml /home/handengke/HLS/sysArray_complex/solution1/.autopilot/db/systolic_array.design.xml -debug_directory /home/handengke/HLS/sysArray_complex/solution1/.debug -hls_directory /home/handengke/HLS/sysArray_complex/solution1/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 28 12:38:00 2022...
+INFO: [HLS 200-802] Generated output file solution1/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 37.41 seconds. CPU system time: 1.71 seconds. Elapsed time: 45.78 seconds; current allocated memory: 342.040 MB.
+[2Kvitis_hls> [11C[2Kvitis_hls> e[12C[2Kvitis_hls> ex[13C[2Kvitis_hls> exi[14C[2Kvitis_hls> exit[15C
+INFO: [Common 17-206] Exiting vitis_hls at Wed Sep 28 12:40:00 2022...

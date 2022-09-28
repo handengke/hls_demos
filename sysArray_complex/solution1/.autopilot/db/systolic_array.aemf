@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1664339810725">
+  <ports id="1" name="gmem" type="PortType" coreId="1869635878" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="din_a" type="PortType" originalName="din_a" coreId="6" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="din_b" type="PortType" originalName="din_b" coreId="1431261768" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="ra" type="PortType" originalName="ra" coreId="2241964608" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="ca" type="PortType" originalName="ca" coreId="1818588261" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="cb" type="PortType" originalName="cb" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="out_r" type="PortType" originalName="out" coreId="0" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="50" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="53" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="55" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="57" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="59" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="61" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="90" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="-90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@ports.0"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="169" RegionName="systolic_array">
+    <basic_blocks id="47" name="systolic_array" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="out_read" originalName="out" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataInputObjs>out_r</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="cb_read" originalName="cb" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <dataInputObjs>cb</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="ca_read" originalName="ca" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <dataInputObjs>ca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="ra_read" originalName="ra" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <dataInputObjs>ra</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="din_b_read" originalName="din_b" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <dataInputObjs>din_b</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="din_a_read" originalName="din_a" coreName="s_axilite" implIndex="UNSUPPORTED" control="no" coreId="122" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <dataInputObjs>din_a</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="pe_array_pe_a_pass_0" lineNumber="101" originalName="pe_array.pe.a_pass[0]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_a_pass_0_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="pe_array_pe_a_pass_1" lineNumber="101" originalName="pe_array.pe.a_pass[1]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_a_pass_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="pe_array_pe_a_pass_2" lineNumber="101" originalName="pe_array.pe.a_pass[2]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_a_pass_2_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="pe_array_pe_a_pass_3" lineNumber="101" originalName="pe_array.pe.a_pass[3]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_a_pass_3_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="pe_array_pe_b_pass_0" lineNumber="101" originalName="pe_array.pe.b_pass[0]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_b_pass_0_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="pe_array_pe_b_pass_1" lineNumber="101" originalName="pe_array.pe.b_pass[1]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_b_pass_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="pe_array_pe_b_pass_2" lineNumber="101" originalName="pe_array.pe.b_pass[2]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_b_pass_2_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="pe_array_pe_val_0" lineNumber="101" originalName="pe_array.pe.val[0]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_val_0_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="pe_array_pe_val_1" lineNumber="101" originalName="pe_array.pe.val[1]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_val_1_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="pe_array_pe_val_2" lineNumber="101" originalName="pe_array.pe.val[2]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_val_2_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="pe_array_pe_val_3" lineNumber="101" originalName="pe_array.pe.val[3]" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." rtlName="pe_array_pe_val_3_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="systolic_array" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="101" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="_ln0" rtlName="Loop_1_proc1_U0" coreId="1701668204" opcode="call" nodeLatency="1" m_display="0" m_delay="0.85" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>gmem</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>gmem</dataOutputObjs>
+        <constName>Loop_1_proc1</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln222" lineNumber="222" fileName="sysArray_complex/sysArray.cpp" fileDirectory=".." coreId="1768843628" contextFuncName="systolic_array" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="sysArray_complex/sysArray.cpp" linenumber="222" fileDirectory="/home/handengke/HLS" functionName="systolic_array"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="sysArray_complex/sysArray.cpp">
+        <validLinenumbers>101</validLinenumbers>
+        <validLinenumbers>222</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="ca_read_reg_198">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="din_a_read_reg_213">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="cb_read_reg_193">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="ra_read_reg_203">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="din_b_read_reg_208">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="out_read_reg_188">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <expressionNodes realName="pe_array_pe_val_3_alloca_fu_108">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_a_pass_1_alloca_fu_72">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_a_pass_0_alloca_fu_68">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_a_pass_2_alloca_fu_76">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_val_0_alloca_fu_96">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_b_pass_1_alloca_fu_88">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_b_pass_0_alloca_fu_84">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_val_1_alloca_fu_100">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_a_pass_3_alloca_fu_80">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_b_pass_2_alloca_fu_92">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pe_array_pe_val_2_alloca_fu_104">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_Loop_1_proc1_fu_148">
+    <nodeIds>45</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="din_a_read_read_fu_142">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="cb_read_read_fu_118">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ra_read_read_fu_130">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ca_read_read_fu_124">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="out_read_read_fu_112">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="din_b_read_read_fu_136">
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioPorts name="ca">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cb">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="din_a">
+    <contents name="read">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="din_b">
+    <contents name="read">
+      <nodeIds>32</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem">
+    <contents name="call">
+      <nodeIds>45</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_r">
+    <contents name="read">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ra">
+    <contents name="read">
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="2"/>
+      <operations id="46" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="systolic_array" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>47</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst">
+        <processe_list name="Loop_1_proc1_U0" ssdmobj_id="45">
+          <pins>
+            <port name="pe_array_pe_val_0" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_78" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_a_pass_0" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_82" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_a_pass_3" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_85" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_a_pass_2" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_88" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_a_pass_1" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_91" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_b_pass_2" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_94" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_b_pass_1" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_97" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_b_pass_0" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_100" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_val_1" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_103" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_val_2" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_106" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="pe_array_pe_val_3" dir="DirInOut" type="MEMType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="_109" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="ca" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_72" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="din_a" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_69" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="ra" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_71" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="gmem" dir="DirInOut" type="BUSType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_68" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="cb" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_73" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="din_b" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_70" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+          <pins>
+            <port name="out" type="SIOType" need_hs="true" top_port_object_id="" top_port_object_id_reference="_74" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Loop_1_proc1_U0" ssdmobj_id="45" object_id="_79"/>
+          </pins>
+        </processe_list>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+        <channel_list/>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

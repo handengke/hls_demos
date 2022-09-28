@@ -1,0 +1,48 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Tue Sep 27 14:09:22 2022
+| Host         : c2 running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/simd_array_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xcu50fsvh2104-2
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------------------------------+---------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|                          Instance                         |                             Module                            | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-----------------------------------------------------------+---------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| bd_0_wrapper                                              |                                                         (top) |       3620 |       3072 |       0 |  548 | 5981 |      0 |      3 |    0 |          5 |
+|   bd_0_i                                                  |                                                          bd_0 |       3620 |       3072 |       0 |  548 | 5981 |      0 |      3 |    0 |          5 |
+|     hls_inst                                              |                                               bd_0_hls_inst_0 |       3620 |       3072 |       0 |  548 | 5981 |      0 |      3 |    0 |          5 |
+|       (hls_inst)                                          |                                               bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|       inst                                                |                                    bd_0_hls_inst_0_simd_array |       3620 |       3072 |       0 |  548 | 5981 |      0 |      3 |    0 |          5 |
+|         (inst)                                            |                                    bd_0_hls_inst_0_simd_array |        445 |        129 |       0 |  316 | 2003 |      0 |      0 |    0 |          0 |
+|         control_s_axi_U                                   |                      bd_0_hls_inst_0_simd_array_control_s_axi |        328 |        328 |       0 |    0 |  311 |      0 |      0 |    0 |          0 |
+|         fadd_32ns_32ns_32_10_full_dsp_1_U1                |    bd_0_hls_inst_0_simd_array_fadd_32ns_32ns_32_10_full_dsp_1 |        245 |        242 |       0 |    3 |  361 |      0 |      0 |    0 |          2 |
+|           (fadd_32ns_32ns_32_10_full_dsp_1_U1)            |    bd_0_hls_inst_0_simd_array_fadd_32ns_32ns_32_10_full_dsp_1 |         50 |         50 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           simd_array_fadd_32ns_32ns_32_10_full_dsp_1_ip_u | bd_0_hls_inst_0_simd_array_fadd_32ns_32ns_32_10_full_dsp_1_ip |        195 |        192 |       0 |    3 |  265 |      0 |      0 |    0 |          2 |
+|         fdiv_32ns_32ns_32_16_no_dsp_1_U3                  |      bd_0_hls_inst_0_simd_array_fdiv_32ns_32ns_32_16_no_dsp_1 |        804 |        770 |       0 |   34 |  795 |      0 |      0 |    0 |          0 |
+|           (fdiv_32ns_32ns_32_16_no_dsp_1_U3)              |      bd_0_hls_inst_0_simd_array_fdiv_32ns_32ns_32_16_no_dsp_1 |         17 |         17 |       0 |    0 |   97 |      0 |      0 |    0 |          0 |
+|           simd_array_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u   |   bd_0_hls_inst_0_simd_array_fdiv_32ns_32ns_32_16_no_dsp_1_ip |        787 |        753 |       0 |   34 |  698 |      0 |      0 |    0 |          0 |
+|         fmul_32ns_32ns_32_5_max_dsp_1_U2                  |      bd_0_hls_inst_0_simd_array_fmul_32ns_32ns_32_5_max_dsp_1 |        103 |        103 |       0 |    0 |  153 |      0 |      0 |    0 |          3 |
+|           (fmul_32ns_32ns_32_5_max_dsp_1_U2)              |      bd_0_hls_inst_0_simd_array_fmul_32ns_32ns_32_5_max_dsp_1 |         16 |         16 |       0 |    0 |   96 |      0 |      0 |    0 |          0 |
+|           simd_array_fmul_32ns_32ns_32_5_max_dsp_1_ip_u   |   bd_0_hls_inst_0_simd_array_fmul_32ns_32ns_32_5_max_dsp_1_ip |         87 |         87 |       0 |    0 |   57 |      0 |      0 |    0 |          3 |
+|         gmem0_m_axi_U                                     |                        bd_0_hls_inst_0_simd_array_gmem0_m_axi |       1170 |       1038 |       0 |  132 | 1564 |      0 |      2 |    0 |          0 |
+|           bus_read                                        |                   bd_0_hls_inst_0_simd_array_gmem0_m_axi_read |        544 |        481 |       0 |   63 |  794 |      0 |      1 |    0 |          0 |
+|           bus_write                                       |                  bd_0_hls_inst_0_simd_array_gmem0_m_axi_write |        607 |        538 |       0 |   69 |  761 |      0 |      1 |    0 |          0 |
+|           wreq_throttle                                   |               bd_0_hls_inst_0_simd_array_gmem0_m_axi_throttle |         19 |         19 |       0 |    0 |    9 |      0 |      0 |    0 |          0 |
+|         gmem1_m_axi_U                                     |                        bd_0_hls_inst_0_simd_array_gmem1_m_axi |        525 |        462 |       0 |   63 |  794 |      0 |      1 |    0 |          0 |
+|           bus_read                                        |                   bd_0_hls_inst_0_simd_array_gmem1_m_axi_read |        525 |        462 |       0 |   63 |  794 |      0 |      1 |    0 |          0 |
++-----------------------------------------------------------+---------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+
+

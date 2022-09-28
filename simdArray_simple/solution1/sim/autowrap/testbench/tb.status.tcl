@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/handengke/HLS/simdArray_simple/solution1/./sim/autowrap/testbench/simdArray.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,218 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2021.1</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>3.000</TargetClockPeriod>
+  <AchievedClockPeriod>2.213</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>2.213</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>2.213</CP_SYNTH>
+  <CP_TARGET>3.000</CP_TARGET>
+  <SLACK_FINAL>0.787</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>0.787</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>0.787</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>0.787</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>2</BRAM>
+    <CLB>0</CLB>
+    <DSP>48</DSP>
+    <FF>8679</FF>
+    <LATCH>0</LATCH>
+    <LUT>4573</LUT>
+    <SRL>133</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>2688</BRAM>
+    <CLB>0</CLB>
+    <DSP>5952</DSP>
+    <FF>1743360</FF>
+    <LUT>871680</LUT>
+    <URAM>640</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="systolic_array" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="8">control_s_axi_U gmem_m_axi_U grp_systolic_array_Pipeline_1_fu_624 grp_systolic_array_Pipeline_VITIS_LOOP_103_1_VITIS_LOOP_104_2_fu_668 grp_systolic_array_Pipeline_VITIS_LOOP_108_3_VITIS_LOOP_109_4_fu_775 grp_systolic_array_Pipeline_VITIS_LOOP_169_5_VITIS_LOOP_170_6_fu_890 grp_systolic_array_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2_fu_691 grp_systolic_array_Pipeline_top_outer_loop1_fu_798</SubModules>
+    <Resources BRAM="2" DSP="48" FF="8679" LUT="4573" LogicLUT="4440" RAMB18="2" SRL="133"/>
+    <LocalResources FF="1382" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="systolic_array_control_s_axi" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_control_s_axi">
+    <Resources FF="246" LUT="203" LogicLUT="203"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem_m_axi_U" BINDMODULE="systolic_array_gmem_m_axi" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_gmem_m_axi">
+    <Resources BRAM="2" FF="1567" LUT="946" LogicLUT="814" RAMB18="2" SRL="132"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_1_fu_624" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_systolic_array_Pipeline_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="1186" LUT="1200" LogicLUT="1200"/>
+    <LocalResources FF="1174"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_1_fu_624/flow_control_loop_pipe_sequential_init_U" BINDMODULE="systolic_array_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_1.v" ORIG_REF_NAME="systolic_array_flow_control_loop_pipe_sequential_init">
+    <Resources FF="12" LUT="1200" LogicLUT="1200"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_103_1_VITIS_LOOP_104_2_fu_668" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_103_1_VITIS_LOOP_104_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="529" LUT="187" LogicLUT="187"/>
+    <LocalResources FF="527" LUT="171" LogicLUT="171"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_103_1_VITIS_LOOP_104_2_fu_668/flow_control_loop_pipe_sequential_init_U" BINDMODULE="systolic_array_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_103_1_VITIS_LOOP_104_2.v" ORIG_REF_NAME="systolic_array_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_108_3_VITIS_LOOP_109_4_fu_775" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_108_3_VITIS_LOOP_109_4">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="529" LUT="116" LogicLUT="116"/>
+    <LocalResources FF="527" LUT="100" LogicLUT="100"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_108_3_VITIS_LOOP_109_4_fu_775/flow_control_loop_pipe_sequential_init_U" BINDMODULE="systolic_array_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_108_3_VITIS_LOOP_109_4.v" ORIG_REF_NAME="systolic_array_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_169_5_VITIS_LOOP_170_6_fu_890" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_169_5_VITIS_LOOP_170_6">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="18" LogicLUT="18"/>
+    <LocalResources FF="43" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_169_5_VITIS_LOOP_170_6_fu_890/flow_control_loop_pipe_sequential_init_U" BINDMODULE="systolic_array_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_169_5_VITIS_LOOP_170_6.v" ORIG_REF_NAME="systolic_array_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="17" LogicLUT="17"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2_fu_691" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="1164" LUT="38" LogicLUT="38"/>
+    <LocalResources FF="1162" LUT="12" LogicLUT="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2_fu_691/flow_control_loop_pipe_sequential_init_U" BINDMODULE="systolic_array_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_41_2.v" ORIG_REF_NAME="systolic_array_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="26" LogicLUT="26"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798" DEPTH="1" FILE_NAME="systolic_array.v" ORIG_REF_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1">
+    <SubModules count="18">flow_control_loop_pipe_sequential_init_U mul_32s_32s_32_3_1_U223 mul_32s_32s_32_3_1_U224 mul_32s_32s_32_3_1_U225 mul_32s_32s_32_3_1_U226 mul_32s_32s_32_3_1_U227 mul_32s_32s_32_3_1_U228 mul_32s_32s_32_3_1_U229 mul_32s_32s_32_3_1_U230 mul_32s_32s_32_3_1_U231 mul_32s_32s_32_3_1_U232 mul_32s_32s_32_3_1_U233 mul_32s_32s_32_3_1_U234 mul_32s_32s_32_3_1_U235 mul_32s_32s_32_3_1_U236 mul_32s_32s_32_3_1_U237 mul_32s_32s_32_3_1_U238 mux_164_32_1_1_U222</SubModules>
+    <Resources DSP="48" FF="2031" LUT="1859" LogicLUT="1858" SRL="1"/>
+    <LocalResources FF="1740" LUT="130" LogicLUT="129" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/flow_control_loop_pipe_sequential_init_U" BINDMODULE="systolic_array_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="1123" LogicLUT="1123"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="34" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U224" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U225" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U226" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U227" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="83" LogicLUT="83"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U228" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U229" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U230" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="43" LogicLUT="43"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U231" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U232" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U233" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="23" LogicLUT="23"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U234" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U235" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U236" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="105" LogicLUT="105"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U237" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="54" LogicLUT="54"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U238" BINDMODULE="systolic_array_mul_32s_32s_32_3_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mul_32s_32s_32_3_1">
+    <Resources DSP="3" FF="17" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mux_164_32_1_1_U222" BINDMODULE="systolic_array_mux_164_32_1_1" DEPTH="2" FILE_NAME="systolic_array_systolic_array_Pipeline_top_outer_loop1.v" ORIG_REF_NAME="systolic_array_mux_164_32_1_1">
+    <Resources LUT="128" LogicLUT="128"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="2.193" DATAPATH_LOGIC_DELAY="2.179" DATAPATH_NET_DELAY="0.014" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST/ALU_OUT[0]" LOGIC_LEVELS="6" MAX_FANOUT="1" SLACK="0.787" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.193" DATAPATH_LOGIC_DELAY="2.179" DATAPATH_NET_DELAY="0.014" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST/ALU_OUT[10]" LOGIC_LEVELS="6" MAX_FANOUT="1" SLACK="0.787" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.193" DATAPATH_LOGIC_DELAY="2.179" DATAPATH_NET_DELAY="0.014" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST/ALU_OUT[11]" LOGIC_LEVELS="6" MAX_FANOUT="1" SLACK="0.787" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.193" DATAPATH_LOGIC_DELAY="2.179" DATAPATH_NET_DELAY="0.014" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST/ALU_OUT[12]" LOGIC_LEVELS="6" MAX_FANOUT="1" SLACK="0.787" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.193" DATAPATH_LOGIC_DELAY="2.179" DATAPATH_NET_DELAY="0.014" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST/ALU_OUT[13]" LOGIC_LEVELS="6" MAX_FANOUT="1" SLACK="0.787" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/mul_32s_32s_32_3_1_U223/buff0_reg/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/systolic_array_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/systolic_array_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/systolic_array_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/systolic_array_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/systolic_array_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/systolic_array_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

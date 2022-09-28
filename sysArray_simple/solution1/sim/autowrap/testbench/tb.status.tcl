@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/handengke/HLS/sysArray_simple/solution1/./sim/autowrap/testbench/sysArray.cpp_pre.cpp.tb.cpp

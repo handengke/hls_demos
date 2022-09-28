@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Sep 16 16:49:34 2022
+# Process ID: 253911
+# Current directory: /home/handengke/HLS/sysArray_simple/solution1/impl/verilog
+# Command line: vivado -mode batch -source run_vivadosyn.tcl
+# Log file: /home/handengke/HLS/sysArray_simple/solution1/impl/verilog/vivado.log
+# Journal file: /home/handengke/HLS/sysArray_simple/solution1/impl/verilog/vivado.jou
+#-----------------------------------------------------------
+source run_vivadosyn.tcl

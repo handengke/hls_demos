@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sysArray.h" path="/home/handengke/HLS/sysArray_simple/sysArray.h"/>
+    <originFiles name="sysArray.cpp" path="/home/handengke/HLS/sysArray_simple/sysArray.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="sysArray_tb.cpp" path="/home/handengke/HLS/sysArray_simple/sysArray_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2021.1
+Project:             simdArray_simple
+Solution:            solution1
+Device target:       xcu50-fsvh2104-2-e
+Report date:         Tue Sep 27 14:10:37 CST 2022
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           3620
+FF:            5981
+DSP:              5
+BRAM:             3
+URAM:             0
+LATCH:            0
+SRL:            548
+CLB:              0
+
+#=== Final timing ===
+CP required:                     3.000
+CP achieved post-synthesis:      1.941
+Timing met

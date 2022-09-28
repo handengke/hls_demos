@@ -1,0 +1,377 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vitis_HLS/2021.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_systolic_array.cpp
+   Compiling sysArray_tb.cpp_pre.cpp.tb.cpp
+   Compiling sysArray.cpp_pre.cpp.tb.cpp
+   Compiling apatb_systolic_array_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+------------------------------
+The input matrices are:
+14	34	20	29	
+31	6	28	27	
+9	14	38	27	
+13	19	18	5	
+
+12	18	17	15	
+0	12	10	15	
+18	2	4	19	
+2	15	2	16	
+------------------------------
+******************************
+cycle 0:
+a_vec is:14	0	0	0	
+b_vec is:12	0	0	0	
+current pe val:
+168	0	0	0	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+******************************
+******************************
+cycle 1:
+a_vec is:34	31	0	0	
+b_vec is:0	18	0	0	
+current pe val:
+168	252	0	0	
+372	0	0	0	
+0	0	0	0	
+0	0	0	0	
+******************************
+******************************
+cycle 2:
+a_vec is:20	6	9	0	
+b_vec is:18	12	17	0	
+current pe val:
+528	660	238	0	
+372	558	0	0	
+108	0	0	0	
+0	0	0	0	
+******************************
+******************************
+cycle 3:
+a_vec is:29	28	14	13	
+b_vec is:2	2	10	15	
+current pe val:
+586	700	578	210	
+876	630	527	0	
+108	162	0	0	
+156	0	0	0	
+******************************
+******************************
+cycle 4:
+a_vec is:0	27	38	19	
+b_vec is:0	15	4	15	
+current pe val:
+586	1135	658	720	
+930	686	587	465	
+792	330	153	0	
+156	234	0	0	
+******************************
+******************************
+cycle 5:
+a_vec is:0	0	27	18	
+b_vec is:0	0	2	19	
+current pe val:
+586	1135	716	1100	
+930	1091	699	555	
+846	406	293	135	
+480	462	221	0	
+******************************
+******************************
+cycle 6:
+a_vec is:0	0	0	5	
+b_vec is:0	0	0	16	
+current pe val:
+586	1135	716	1564	
+930	1091	753	1087	
+846	811	445	345	
+490	498	411	195	
+******************************
+******************************
+cycle 7:
+a_vec is:0	0	0	0	
+b_vec is:0	0	0	0	
+current pe val:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1067	
+490	573	483	480	
+******************************
+******************************
+cycle 8:
+a_vec is:0	0	0	0	
+b_vec is:0	0	0	0	
+current pe val:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1499	
+490	573	493	822	
+******************************
+******************************
+cycle 9:
+a_vec is:0	0	0	0	
+b_vec is:0	0	0	0	
+current pe val:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1499	
+490	573	493	902	
+******************************
+------------------------------
+The res from CMM function is:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1499	
+490	573	493	902	
+
+The res from sysArray is:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1499	
+490	573	493	902	
+------------------------------
+
+TEST PASSED!
+
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_systolic_array_top glbl -Oenable_linking_all_libraries -prj systolic_array.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s systolic_array -debug wave 
+Multi-threading is on. Using 30 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_mul_32s_32s_32_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_mul_32s_32s_32_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/AESL_axi_master_gmem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_systolic_array_Pipeline_VITIS_LOOP_107_3_VITIS_LOOP_108_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_systolic_array_Pipeline_VITIS_LOOP_107_3_VITIS_LOOP_108_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_mux_42_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_mux_42_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_systolic_array_Pipeline_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_systolic_array_Pipeline_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_systolic_array_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_systolic_array_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_gmem_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_read
+INFO: [VRFC 10-311] analyzing module systolic_array_gmem_m_axi_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_systolic_array_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_systolic_array_Pipeline_top_outer_loop1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_systolic_array_Pipeline_top_outer_loop1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_systolic_array_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_systolic_array_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array_mux_165_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_array_mux_165_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.systolic_array_mux_42_32_1_1(ID=...
+Compiling module xil_defaultlib.systolic_array_flow_control_loop...
+Compiling module xil_defaultlib.systolic_array_systolic_array_Pi...
+Compiling module xil_defaultlib.systolic_array_systolic_array_Pi...
+Compiling module xil_defaultlib.systolic_array_systolic_array_Pi...
+Compiling module xil_defaultlib.systolic_array_systolic_array_Pi...
+Compiling module xil_defaultlib.systolic_array_mul_32s_32s_32_3_...
+Compiling module xil_defaultlib.systolic_array_systolic_array_Pi...
+Compiling module xil_defaultlib.systolic_array_mux_165_32_1_1(ID...
+Compiling module xil_defaultlib.systolic_array_systolic_array_Pi...
+Compiling module xil_defaultlib.systolic_array_control_s_axi
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_reg_sl...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_fifo(D...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_buffer...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_fifo(D...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_fifo(D...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_fifo(D...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_write(...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_buffer...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_reg_sl...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_read(N...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi_thrott...
+Compiling module xil_defaultlib.systolic_array_gmem_m_axi(NUM_RE...
+Compiling module xil_defaultlib.systolic_array
+Compiling module xil_defaultlib.AESL_axi_master_gmem
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_systolic_array_top
+Compiling module work.glbl
+Built simulation snapshot systolic_array
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /home/handengke/HLS/sysArray_simple/solution1/sim/verilog/xsim.dir/systolic_array/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Sep 28 10:03:12 2022...
+
+****** xsim v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/systolic_array/xsim_script.tcl
+# xsim {systolic_array} -view {{systolic_array_dataflow_ana.wcfg}} -tclbatch {systolic_array.tcl} -protoinst {systolic_array.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file systolic_array.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array//AESL_inst_systolic_array_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array/grp_systolic_array_Pipeline_1_fu_624/grp_systolic_array_Pipeline_1_fu_624_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array/grp_systolic_array_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2_fu_668/grp_systolic_array_Pipeline_VITIS_LOOP_102_1_VITIS_LOOP_103_2_fu_668_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array/grp_systolic_array_Pipeline_VITIS_LOOP_107_3_VITIS_LOOP_108_4_fu_775/grp_systolic_array_Pipeline_VITIS_LOOP_107_3_VITIS_LOOP_108_4_fu_775_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array/grp_systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6_fu_890/grp_systolic_array_Pipeline_VITIS_LOOP_168_5_VITIS_LOOP_169_6_fu_890_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array/grp_systolic_array_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_691/grp_systolic_array_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_691_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_systolic_array_top/AESL_inst_systolic_array/grp_systolic_array_Pipeline_top_outer_loop1_fu_798/grp_systolic_array_Pipeline_top_outer_loop1_fu_798_activity
+Time resolution is 1 ps
+open_wave_config systolic_array_dataflow_ana.wcfg
+source systolic_array.tcl
+## log_wave [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /apatb_systolic_array_top/AESL_inst_systolic_array/*]
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set din_a__din_b__out_r_group [add_wave_group din_a__din_b__out_r(axi_master) -into $cinoutgroup]
+## set rdata_group [add_wave_group "Read Channel" -into $din_a__din_b__out_r_group]
+## set wdata_group [add_wave_group "Write Channel" -into $din_a__din_b__out_r_group]
+## set ctrl_group [add_wave_group "Handshakes" -into $din_a__din_b__out_r_group]
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_BUSER -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_BID -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_BRESP -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_BREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_BVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RRESP -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RUSER -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RID -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RDATA -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_RVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARUSER -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARREGION -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARQOS -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARPROT -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARCACHE -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARLOCK -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARBURST -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARSIZE -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARLEN -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARID -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARADDR -into $rdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_ARVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WUSER -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WID -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WLAST -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WSTRB -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WDATA -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_WVALID -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWUSER -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWREGION -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWQOS -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWPROT -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWCACHE -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWLOCK -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWBURST -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWSIZE -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWLEN -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWID -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWADDR -into $wdata_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWREADY -into $ctrl_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/m_axi_gmem_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+## set din_a__din_b__out_r__return_group [add_wave_group din_a__din_b__out_r__return(axi_slave) -into $cinoutgroup]
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/interrupt -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_BRESP -into $din_a__din_b__out_r__return_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_BREADY -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_BVALID -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_RRESP -into $din_a__din_b__out_r__return_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_RDATA -into $din_a__din_b__out_r__return_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_RREADY -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_RVALID -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_ARREADY -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_ARVALID -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_ARADDR -into $din_a__din_b__out_r__return_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_WSTRB -into $din_a__din_b__out_r__return_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_WDATA -into $din_a__din_b__out_r__return_group -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_WREADY -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_WVALID -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_AWREADY -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_AWVALID -into $din_a__din_b__out_r__return_group -color #ffff00 -radix hex
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/s_axi_control_AWADDR -into $din_a__din_b__out_r__return_group -radix hex
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_systolic_array_top/AESL_inst_systolic_array/ap_clk -into $clockgroup
+## save_wave_config systolic_array.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "107000"
+// RTL Simulation : 1 / 1 [100.00%] @ "602000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 619500 ps : File "/home/handengke/HLS/sysArray_simple/solution1/sim/verilog/systolic_array.autotb.v" Line 431
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Sep 28 10:03:27 2022...
+------------------------------
+The input matrices are:
+5	39	9	35	
+38	28	10	28	
+23	4	26	21	
+29	19	35	1	
+
+15	0	17	2	
+4	19	13	18	
+0	6	13	13	
+9	9	12	6	
+------------------------------
+------------------------------
+The res from CMM function is:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1499	
+490	573	493	902	
+
+The res from sysArray is:
+586	1135	716	1564	
+930	1091	753	1519	
+846	811	499	1499	
+490	573	493	902	
+------------------------------
+
+TEST PASSED!
+
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
